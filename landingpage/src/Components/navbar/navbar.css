@@ -1,6 +1,6 @@
 .lp__navbar {
     position: fixed;
-    top: 0;
+    top: -15px;
     right: 0;
     left: 0;
     width: 100%;
@@ -8,10 +8,12 @@
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
-    transition: background-color 0.3s ease;
+    transition: background-color all 0.2s;
 }
 
 .lp__navbar.scrolling {
+    padding: 1rem 1.5rem 1px 2rem;
+    max-height: 5rem;
     background-color: var(--green-bg-color);
 }
 

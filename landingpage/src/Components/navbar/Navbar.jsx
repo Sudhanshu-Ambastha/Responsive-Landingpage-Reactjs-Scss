@@ -11,7 +11,7 @@ const Navbar = () => {
     const homeSection = document.querySelector('#home');
     const scrollPosition = window.scrollY;
     const navbarHeight = navbar.offsetHeight;
-    const gap = 0.9375 * parseFloat(getComputedStyle(navbar).fontSize); // Convert rem to pixels
+    const gap = 10 * parseFloat(getComputedStyle(navbar).fontSize); // Convert rem to pixels
 
     // Calculate the threshold scroll position based on the gap
     const thresholdPosition = homeSection.offsetTop + gap;
@@ -40,7 +40,7 @@ const Navbar = () => {
           <p><a href="#contact">Contact</a></p>
         </div>
       </div>
-      <div className="lp__icons">
+      <div className="lp__icon">
         <li className="icon">
             <FaFacebookF />
         </li>
