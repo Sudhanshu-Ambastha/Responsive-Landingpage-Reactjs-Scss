@@ -1,12 +1,13 @@
-/* calls.css */
-
-/* Global Styles */
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 
 body {
   font-family: Arial, sans-serif;
@@ -18,12 +19,18 @@ body {
 /* Form Styles */
 
 .lp_container {
+  position: relative;
   max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
   background-color: var(--dark-green-color);
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: grid;
+  -webkit-box-align: stretch;
+  box-sizing: border-box;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .lp_section-title {
@@ -34,6 +41,15 @@ body {
 
 .lp_form {
   margin-top: 20px;
+  margin-left: 20px;
+  padding-left: 20px;
+  margin-bottom: 1.25rem;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  align-self: flex-start;
+  grid-column: 2;
 }
 
 .lp_form input[type="text"],
@@ -64,30 +80,32 @@ body {
   color: #666;
 }
 
+.lp_terms-container .terms{
+  text-align: space-between;
+}
+
 .lp_terms-container .underline {
   text-decoration: underline;
 }
 
-.lp_form button {
+/* .lp_form button {
   width: 100%;
   padding: 10px;
   font-size: 16px;
   font-weight: bold;
-  color: #fff;
-  background-color: #337ab7;
   border: none;
   border-radius: 3px;
   cursor: pointer;
 }
 
-.lp_form button:hover {
-  background-color: #23527c;
-}
 
 /* Text Styles */
 
 .text-container {
   padding: 20px;
+  flex: 1;
+  align-self: inherit;
+  width: 50%;
 }
 
 .white {
@@ -95,7 +113,7 @@ body {
 }
 
 .lp_section-title {
-  color: #337ab7;
+  color: var(--light-green-color);
 }
 
 .list-unstyled {
@@ -111,11 +129,10 @@ body {
 .list-unstyled li:before {
   content: "";
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 0.5rem;
+  height: 0.5rem;
   margin-right: 10px;
-  background-color: #337ab7;
-  border-radius: 50%;
+  background-color: var(--light-green-color);
 }
 
 .media {
@@ -129,5 +146,5 @@ body {
 
 .fas {
   font-size: 20px;
-  color: #337ab7;
+  color: var(--light-green-color);
 }

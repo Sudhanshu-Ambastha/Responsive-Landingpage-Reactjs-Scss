@@ -10,7 +10,7 @@ const Navbar = () => {
     const navbar = document.querySelector('.lp__navbar');
     const homeSection = document.querySelector('#home');
     const scrollPosition = window.scrollY;
-    const navbarHeight = navbar.offsetHeight;
+    // const navbarHeight = navbar.offsetHeight;
     const gap = 10 * parseFloat(getComputedStyle(navbar).fontSize); // Convert rem to pixels
 
     // Calculate the threshold scroll position based on the gap

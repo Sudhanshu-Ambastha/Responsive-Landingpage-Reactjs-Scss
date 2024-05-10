@@ -3,7 +3,7 @@ import "./calls.css";
 
 const Calls = () => (
   <div id="callMe" className="form-1">
-    <div className="lp_container">
+ <div className="lp_container">
       <div className="row">
         <div className="col-lg-6">
           <div className="text-container">
@@ -22,10 +22,22 @@ const Calls = () => (
                   It's very easy fill in the form so we can call
                 </div>
               </li>
-              <li>During the call we'll require some info about the company</li>
-              <li>Don't hesitate to email us for any questions or inquires</li>
+              <li className="media">
+                <i className="fas fa-square"></i>
+                <div className="media-body">
+                  During the call we'll require some info about the company
+                </div>
+              </li>
+              <li className="media">
+                <i className="fas fa-square"></i>
+                <div className="media-body">
+                  Don't hesitate to email us for any questions or inquires
+                </div>
+              </li>
             </ul>
           </div>
+          </div>
+
           <div className="lp_form">
             <form>
               <input type="text" name="name" placeholder="Name" />
@@ -44,7 +56,7 @@ const Calls = () => (
                 <label htmlFor="terms">
                   I agree with the Aria's stated{" "}
                   <span className="underline">Privacy Policy</span>
-                  and
+                  and 
                   <span className="underline">terms & conditions</span>
                 </label>
               </div>
@@ -54,7 +66,7 @@ const Calls = () => (
         </div>
       </div>
     </div>
-  </div>
+
 );
 
 export default Calls;

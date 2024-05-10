@@ -54,6 +54,11 @@ button:hover {
   color: var(--light-green-color);
 }
 
+.lp-section-title{
+  color: var(--light-green-color);
+  font: 500 0.8125rem / 1.125rem "Montserrat", sans-serif;
+}
+
 @-webkit-keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.5);

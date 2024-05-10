@@ -3,6 +3,7 @@ import "./contact.css";
 
 const Contact = () => (
   <>
+  <div className="column">
     <span className="section-title">CONTACT</span>
     <h3>Get In Touch using the form</h3>
     <br />
@@ -68,6 +69,7 @@ const Contact = () => (
           <i className="fa-brands fa-behance"></i>
         </span>
       </div>
+    </div>
     </div>
     <div className="form">
       <form>
