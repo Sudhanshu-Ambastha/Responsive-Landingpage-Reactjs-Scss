@@ -7,9 +7,14 @@
     display: block;
     font-size: 0.8125rem;
     font-weight: bold;
-    color: #333;
+    color: var(--light-green-color);
     margin-bottom: 20px;
     text-transform: uppercase;
+    text-align: center;
+}
+
+.lp__header_section__padding h2{
+    color: var(--dark-gray-color);
     text-align: center;
 }
 
@@ -20,7 +25,7 @@
     margin-top: 50px;
 }
 
-.service-item {
+.service-item_1, .service-item_2, .service-item_3 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,12 +38,40 @@
     border-radius: 10px;
 }
 
-.service-item img {
+.service-item_1 .Coffeecup{
+  background-image: url(../../assets/Coffeecup.jpg);
+  top: 0;
   height: 200px;
-  max-width: 100%;
+  width: 300px;
   margin-bottom: 20px;
   display: block;
   border-radius: 10px;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+}
+.service-item_2 .Book{
+  margin-top: -1.19rem;
+  background-image: url(../../assets/Book.jpg);
+  height: 200px;
+  width: 300px;
+  margin-bottom: 20px;
+  display: block;
+  border-radius: 10px;
+}
+.service-item_3 .Laptop{
+  margin-top: -1.19rem;
+  background-image: url(../../assets/Laptop.jpg);
+  height: 200px;
+  width: 300px;
+  margin-bottom: 20px;
+  display: block;
+  border-radius: 10px;
+  object-position: center;
+  object-fit: contain;
+  background-size: cover;
+  align-items: start;
+  justify-content: start;
 }
 
 .service-item h4 {
@@ -48,33 +81,33 @@
     margin-bottom: 10px;
 }
 
-.fas {
+.fas fa-square square-icon {
     font-size: 20px;
     color: var(--light-green-color);
 }
 
-.list-unstyled {
+/* .service-item_1 li {
   list-style: none;
   padding: 0;
   margin: 0;
-}
+} */
 
-.list-unstyled li {
+/* .service-item_1 li {
   margin-bottom: 10px;
-}
+} */
 
-.list-unstyled li:before {
-  content: "";
-  display: inline-block;
+.service-item_1, li:before {
+  /* content: "";
+  display: inline-block; */
   width: 0.5rem;
   height: 0.5rem;
-  margin-right: 10px;
+  /* margin-right: 10px; */
   background-color: var(--light-green-color);
 }
 
-.service-item p {
+.service-item_1, .service-item_2, .service-item_3 p {
     font-size: 16px;
-    color: #666;
+    color: var(--dark-gray-color);
     line-height: 1.5;
     margin-bottom: 20px;
 }
@@ -92,7 +125,7 @@
 .service-item li {
     margin: 0 10px;
     font-size: 14px;
-    color: #666;
+    color: var(--dark-gray-color);
 }
 
 .service-item h6 {
@@ -126,5 +159,5 @@
 .service-item button:hover {
     background-color: transparent;
     color: var(--light-green-color);
-     border: 1px solid var(--light-green-color);
+    border: 1px solid var(--light-green-color);
 }

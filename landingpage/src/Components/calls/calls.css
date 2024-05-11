@@ -1,139 +1,138 @@
-* {
-  box-sizing: border-box;
+body,
+html {
   margin: 0;
   padding: 0;
-}
-
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-
-body {
   font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+}
+
+.calls-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--green-bg-color);
   color: var(--white);
+  height: 100vh;
 }
 
-/* Form Styles */
-
-.lp_container {
-  position: relative;
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: var(--dark-green-color);
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  display: grid;
-  -webkit-box-align: stretch;
-  box-sizing: border-box;
-  grid-template-rows: 1fr, 1fr;
-}
-
-.lp_section-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.lp_form {
-  margin-top: 20px;
-  margin-left: 20px;
-  padding-left: 20px;
-  margin-bottom: 1.25rem;
-  width: 100%;
-  display: block;
-  box-sizing: border-box;
-  position: relative;
-  align-self: flex-start;
-  grid-row-end: 2;
-}
-
-.lp_form input[type="text"],
-.lp_form input[type="email"],
-.lp_form select {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  margin-bottom: 15px;
-}
-
-.lp_form input[type="checkbox"] {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-
-.lp_terms-container {
-  margin-top: 10px;
-}
-
-.lp_terms-container label {
-  font-size: 14px;
-  color: #666;
-}
-
-.lp_terms-container .terms{
-  text-align: space-between;
-}
-
-.lp_terms-container .underline {
-  text-decoration: underline;
-}
-
-.text-container {
-  padding: 20px;
-  flex: 1;
-  align-self: inherit;
+.calls-form, .calls-info {
+  display: flex;
+  flex-direction: column;
   width: 50%;
-  grid-row-start: 1;
-  
+  padding-top: 7rem;
+  padding-bottom: 5.625rem;
+  box-sizing: border-box;
+  position: relative;
 }
 
-.white {
-  color: #fff;
+.calls-info{
+  padding-left: 5rem;
 }
 
-.lp_section-title {
-  color: var(--light-green-color);
+.calls-form{
+  padding-right: 5rem;
 }
 
-.list-unstyled {
-  list-style: none;
+.calls-info h2,
+.calls-info p,
+.calls-info ul {
+  margin: 0 0 10px;
+}
+
+.contact-info ul {
+  list-style-type: none;
   padding: 0;
-  margin: 0;
 }
 
-.list-unstyled li {
-  margin-bottom: 10px;
-}
-
-.list-unstyled li:before {
+/* .calls-info, li:before {
   content: "";
   display: inline-block;
   width: 0.5rem;
   height: 0.5rem;
   margin-right: 10px;
   background-color: var(--light-green-color);
+} */
+
+.fas fa-square square-icon {
+    font-size: 20px;
+    color: var(--light-green-color);
 }
 
-.media {
-  display: flex;
-  align-items: center;
+.calls-info ul li {
+  margin-bottom: 5px;
+  color: var(--light-gray-color);
 }
 
-.media-body {
-  margin-left: 10px;
+.calls-form input[type="text"],
+.calls-form input[type="email"],
+.calls-form select,
+.calls-form button {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
 }
 
-.fas {
-  font-size: 20px;
+.calls-form button {
+  background-color: var(--light-green-color);
+  color: var(--white);
+  cursor: pointer;
+  width: 100%;
+}
+
+.calls-form button:hover {
+  background-color: transparent;
   color: var(--light-green-color);
+  border: 1px solid var(--light-green-color);
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: var(--white);
+}
+
+.checkbox-container input:checked~.checkmark {
+  background-color: var(--dark-gray-color);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked~.checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--white);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
 }

@@ -1,47 +1,39 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaPinterest, FaInstagram, FaLinkedin, FaBehance,  } from 'react-icons/fa'; 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { FaLocationdot } from '@awesome.me/kit-KIT_CODE/icons';
+import { FaFacebookF, FaTwitter, FaPinterest, FaInstagram, FaLinkedin, FaBehance } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FaLocationDot } from "@fortawesome/free-solid-svg-icons";
 import "./contact.css";
 
 const Contact = () => (
-  <>
-  <div className="column">
-    <span className="section-title">CONTACT</span>
-    <h3>Get In Touch using the form</h3>
-    <br />
-    <p>
-      You can stop by our office for a cup of coffee and just use the contact
-      form beginning questioned and inquires
-    </p>
-    <br />
-    <div className="contact-info-list-container">
-      <div className="contact-info-item">
+  <div>
+    <div className="contact-container">
+      <div className="contact-info">
+        <span className="section-title">Contact</span>
+        <h2>Get In Touch using the form</h2>
         <p>
-          <FontAwesomeIcon icon="fa-solid fa-location-dot" />22nd Inovative street, San
-          Francisco, CA 94043, US
+          You can stop by our office for a cup of coffee and just use the
+          contact form beginning questioned and inquires
         </p>
-      </div>
-      <div className="contact-info-item">
-        <p>
-          <FontAwesomeIcon className="fa-solid fa-phone-flip"></FontAwesomeIcon>+81 720 22 128
-        </p>
-      </div>
-      <div className="contact-info-item">
-        <p>
-          <FontAwesomeIcon className="fa-solid fa-phone-flip"></FontAwesomeIcon>+81 720 22 126
-        </p>
-      </div>
-      <div className="contact-info-item">
-        <p>
-          <i className="fa-regular fa-envelope"></i>office@domain.com
-        </p>
-      </div>
-    </div>
-    <br />
-    <br />
-    <h4>Follow Aria on Social Media</h4>
-    <div className="social-link-list-container">
+        <ul>
+          <li>
+            {/* <FontAwesomeIcon icon={FaLocationDot} /> */}
+            22nd Inovative street, San Francisco, CA 94043, US
+          </li>
+          <li>
+            {/*<FontAwesomeIcon className="fa-solid fa-phone-flip" />*/}+81 720
+            22 128
+          </li>
+          <li>
+            {/*<FontAwesomeIcon className="fa-solid fa-phone-flip" />*/}+81 720
+            22 126
+          </li>
+          <li>
+            {/*<i className="fa-regular fa-envelope" />*/}office@domain.com
+          </li>
+        </ul>
+        <br />
+        <h3>Follow Aria on Social Media</h3>
+        <div className="social-link-list-container">
       <div className="social-link-item">
         <span>
           <FaFacebookF />
@@ -73,25 +65,20 @@ const Contact = () => (
         </span>
       </div>
     </div>
-    </div>
-    <div className="form">
-      <form>
-        <input type="text" placeholder="Name" name="name" />
-        <input type="text" placeholder="Email" name="email" />
-        <textarea name="message" placeholder="Your Message"></textarea>
-        <div className="terms">
-          <input type="checkbox" name="terms" id="contact_terms" value="1" />
-          <label htmlFor="terms">
-            I agree with the Aria's stated
-            <span className="underline">Privacy Policy</span>
-            and
-            <span className="underline">terms & conditions</span>
+        <form className="contact-form">
+          <input type="text" placeholder="Name" required />
+          <input type="email" placeholder="Email" required />
+          <input type="message" placeholder="message" required />
+          <label className="checkbox-container">
+            <input type="checkbox" required />
+            <span className="checkmark"></span>I agree with Aria's stated
+            Privacy Policy and Terms & Conditions
           </label>
-        </div>
-        <button type="submit">Submit Message</button>
-      </form>
+          <button>CALL ME</button>
+        </form>
+      </div>
     </div>
-  </>
+  </div>
 );
 
 export default Contact;

@@ -8,8 +8,8 @@ const Services = () => (
           <br />
           That Suits Your Needs</h2>
       <div className='lp_service-list-container'>
-        <div className='service-item'>
-          <img src='../../assets/Book.jpg' alt='Book' />
+        <div className='service-item_1'>
+          <div className="Coffeecup"/>
           <h4>Off The Ground Off The Ground</h4>
           <p>
             Perfect for fresh ideas or young startups, this packages will help to get the business off the ground.
@@ -23,9 +23,10 @@ const Services = () => (
           <button>Details</button>
         </div>
         
-        <div className='service-item'>
-          <img src='../../assets/Coffeecup.jpg' alt='Coffeecup' loading="lazy"/>
+        <div className='service-item_2'>
+          <div className="Book"></div>
           <h4>Accelerated Growth</h4>
+
           <p>
             Use this service pack to give your company the necessary impulse to become an industry leader
           </p>  
@@ -38,8 +39,8 @@ const Services = () => (
           <button>Details</button>
         </div>
         
-        <div className='service-item'>
-          <img src="../../assets/Laptop.jpg" alt="Laptop" loading="lazy"/>
+        <div className='service-item_3'>
+          <div className="Laptop"></div>
           <h4>Market Domination</h4>
           <p>
             You already are a reference point in your industry now you need to learn about acquisitions
