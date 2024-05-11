@@ -27,5 +27,6 @@
 .bg p {
     font-size: 1.5rem;
     width: 50%;
+    color: var(--white);
 }
 

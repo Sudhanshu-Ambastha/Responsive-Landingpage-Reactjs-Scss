@@ -2,12 +2,12 @@ import React from 'react';
 import './services.css';
 
 const Services = () => (
-  <div className="gpt3__header section__padding" id="home">
-   <span className='Section-title'>Services</span>
-      <h3>Choose The Services Package
+  <div className="lp__header_section__padding" id="home">
+   <span className='lp_section-title'>Services</span>
+      <h2>Choose The Services Package
           <br />
-          That Suits Your Needs</h3>
-      <div className='service-list-container'>
+          That Suits Your Needs</h2>
+      <div className='lp_service-list-container'>
         <div className='service-item'>
           <img src='./assets/Book.jpg' alt='Book' />
           <h4>Off The Ground Off The Ground</h4>

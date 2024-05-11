@@ -1,4 +1,7 @@
 import React from "react";
+import { FaFacebookF, FaTwitter, FaPinterest, FaInstagram, FaLinkedin, FaBehance,  } from 'react-icons/fa'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FaLocationdot } from '@awesome.me/kit-KIT_CODE/icons';
 import "./contact.css";
 
 const Contact = () => (
@@ -15,18 +18,18 @@ const Contact = () => (
     <div className="contact-info-list-container">
       <div className="contact-info-item">
         <p>
-          <i className="fa-solid fa-location-pin"></i>22nd Inovative street, San
+          <FontAwesomeIcon icon="fa-solid fa-location-dot" />22nd Inovative street, San
           Francisco, CA 94043, US
         </p>
       </div>
       <div className="contact-info-item">
         <p>
-          <i className="fa-solid fa-phone-flip"></i>+81 720 22 128
+          <FontAwesomeIcon className="fa-solid fa-phone-flip"></FontAwesomeIcon>+81 720 22 128
         </p>
       </div>
       <div className="contact-info-item">
         <p>
-          <i className="fa-solid fa-phone-flip"></i>+81 720 22 126
+          <FontAwesomeIcon className="fa-solid fa-phone-flip"></FontAwesomeIcon>+81 720 22 126
         </p>
       </div>
       <div className="contact-info-item">
@@ -41,32 +44,32 @@ const Contact = () => (
     <div className="social-link-list-container">
       <div className="social-link-item">
         <span>
-          <i className="fa-brands fa-facebook-f"></i>
+          <FaFacebookF />
         </span>
       </div>
       <div className="social-link-item">
         <span>
-          <i className="fa-brands fa-twitter"></i>
+          <FaTwitter />
         </span>
       </div>
       <div className="social-link-item">
         <span>
-          <i className="fa-brands fa-pinterest"></i>
+          <FaPinterest />
         </span>
       </div>
       <div className="social-link-item">
         <span>
-          <i className="fa-brands fa-instagram"></i>
+          <FaInstagram />
         </span>
       </div>
       <div className="social-link-item">
         <span>
-          <i className="fa-brands fa-linkedin-in"></i>
+          <FaLinkedin />
         </span>
       </div>
       <div className="social-link-item">
         <span>
-          <i className="fa-brands fa-behance"></i>
+          <FaBehance />
         </span>
       </div>
     </div>

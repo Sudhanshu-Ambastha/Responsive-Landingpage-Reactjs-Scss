@@ -21,11 +21,11 @@ ul li a {
 }
 
 ul li a:hover {
-    color: #f39c12;
+    text-decoration: underline;
 }
 
 ul li a:active {
-    color: #f39c12;
+    text-decoration: underline;
 }
 
 ul li {
@@ -83,7 +83,7 @@ li.media {
 }
 
 .footer a:hover {
-    color: #f39c12;
+    cursor: pointer;
 }
 
 .lp__footer-heading {
@@ -120,8 +120,3 @@ li.media {
     color: #bbb;
 }
 
-.gradient__text {
-    background: linear-gradient(45deg, #ff5733, #ff8c00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}

@@ -1,0 +1,102 @@
+.lp__header_section__padding {
+    padding: 100px 0;
+    background-color: #f5f5f5;
+}
+
+.lp_section-title {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.lp_service-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33.33%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.service-item img {
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.service-item h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.service-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.service-item li {
+    margin: 0 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.service-item h6 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.service-item .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--light-green-color);
+    margin-left: 10px;
+}
+
+.service-item button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--light-green-color);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.service-item button:hover {
+    background-color: transparent;
+    color: var(--light-green-color);
+     border: 1px solid var(--light-green-color);
+}
