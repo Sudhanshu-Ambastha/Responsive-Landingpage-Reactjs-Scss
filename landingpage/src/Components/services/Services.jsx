@@ -9,42 +9,44 @@ const Services = () => (
           That Suits Your Needs</h2>
       <div className='lp_service-list-container'>
         <div className='service-item'>
-          <img src='./assets/Book.jpg' alt='Book' />
+          <img src='../../assets/Book.jpg' alt='Book' />
           <h4>Off The Ground Off The Ground</h4>
           <p>
             Perfect for fresh ideas or young startups, this packages will help to get the business off the ground.
           </p>  
           <ul>
-            <li>Environment and competition</li>
-            <li>Design the marketing plan</li>
+            <i className="fas fa-square square-icon"></i><li>Environment and competition</li>
+            <br />
+            <i className="fas fa-square square-icon"></i><li>Design the marketing plan</li>
           </ul>
           <h6>Starting at <span className='price'>$199</span></h6>
           <button>Details</button>
         </div>
         
         <div className='service-item'>
-          <img src='./assets/Coffeecup.jpg' alt='Coffeecup' loading="lazy"/>
+          <img src='../../assets/Coffeecup.jpg' alt='Coffeecup' loading="lazy"/>
           <h4>Accelerated Growth</h4>
           <p>
             Use this service pack to give your company the necessary impulse to become an industry leader
           </p>  
           <ul>
-            <li>Business strategy planning</li>
-            <li>Taking the planned actions</li>
+            <i className="fas fa-square square-icon"></i><li>Business strategy planning</li>
+            <br />
+            <i className="fas fa-square square-icon"></i><li>Taking the planned actions</li>
           </ul>
           <h6>Starting at <span className='price'>$299</span></h6>
           <button>Details</button>
         </div>
         
         <div className='service-item'>
-          <img src="./assets/Laptop.jpg" alt="Laptop" loading="lazy"/>
+          <img src="../../assets/Laptop.jpg" alt="Laptop" loading="lazy"/>
           <h4>Market Domination</h4>
           <p>
             You already are a reference point in your industry now you need to learn about acquisitions
           </p>  
           <ul>
-            <li>Maintaining the leader status</li>
-            <li>Acquisitions the right way</li>
+            <i className="fas fa-square square-icon"></i><li>Maintaining the leader status</li>
+            <i className="fas fa-square square-icon"></i><li>Acquisitions the right way</li>
           </ul>
           <h6>Starting at <span className='price'>$299</span></h6>
           <button>Details</button>
