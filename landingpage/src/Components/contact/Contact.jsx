@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaPinterest, FaInstagram, FaLinkedin, FaBehance } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaPinterest, FaInstagram, FaLinkedin, FaBehance , FaPhone } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { FaLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { MapPin, Mail } from 'lucide-react';
@@ -20,12 +20,10 @@ const Contact = () => (
            <MapPin />22nd Inovative street, San Francisco, CA 94043, US
           </li>
           <li>
-            {/*<FontAwesomeIcon className="fa-solid fa-phone-flip" />*/}+81 720
-            22 128
+            <FaPhone />+81 720 22 128
           </li>
           <li>
-            {/*<FontAwesomeIcon className="fa-solid fa-phone-flip" />*/}+81 720
-            22 126
+            <FaPhone />+81 720 22 126
           </li>
           <li>
             <Mail />office@domain.com
@@ -79,6 +77,6 @@ const Contact = () => (
       </div>
     </div>
   </div>
-);
-
+)
+            
 export default Contact;
