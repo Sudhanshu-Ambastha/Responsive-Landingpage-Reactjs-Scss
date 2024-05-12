@@ -12,9 +12,9 @@ const Calls = () => (
         you decide what service package works.
       </p>
       <ul>
-        <i className="fas fa-square square-icon"></i><li>It's very easy just fill in the form so we can call</li>
-        <i className="fas fa-square square-icon"></i><li>During the call we'll require some info about the company</li>
-        <i className="fas fa-square square-icon"></i><li>Don't hesitate to email us for any questions or inquiries</li>
+        <li><span>&#9632;</span>It's very easy just fill in the form so we can call</li>
+        <li><span>&#9632;</span>During the call we'll require some info about the company</li>
+        <li><span>&#9632;</span>Don't hesitate to email us for any questions or inquiries</li>
       </ul>
     </div>
     <form className="calls-form">
@@ -23,9 +23,9 @@ const Calls = () => (
       <input type="email" placeholder="Email" required />
       <select required>
         <option value="">Interested in...</option>
-        <option value="service1">Service 1</option>
-        <option value="service2">Service 2</option>
-        <option value="service3">Service 3</option>
+        <option value="service1">Off The Ground</option>
+        <option value="service2">Accelerated Growth</option>
+        <option value="service3">Market Domain</option>
       </select>
       <label className="checkbox-container">
         <input type="checkbox" required />

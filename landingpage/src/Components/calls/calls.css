@@ -8,10 +8,12 @@ html {
 .calls-container {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 1.5rem 1rem 1.5rem 1rem;
   background-color: var(--green-bg-color);
   color: var(--white);
   height: 100vh;
+  font: 400 1.5rem "Open Sans", sans-serif;
+  gap: 1rem;
 }
 
 .calls-form, .calls-info {
@@ -22,14 +24,20 @@ html {
   padding-bottom: 5.625rem;
   box-sizing: border-box;
   position: relative;
+  
 }
 
 .calls-info{
   padding-left: 5rem;
+  padding-right: 1rem  
 }
 
 .calls-form{
+  padding-left: 1rem;
   padding-right: 5rem;
+  box-sizing: border-box;
+  position: relative;
+  gap: 0.7rem;
 }
 
 .calls-info h2,
@@ -38,39 +46,56 @@ html {
   margin: 0 0 10px;
 }
 
-.contact-info ul {
-  list-style-type: none;
-  padding: 0;
+.calls-info p{
+  font-size: 20.5px;
 }
 
-/* .calls-info, li:before {
-  content: "";
-  display: inline-block;
-  width: 0.5rem;
-  height: 0.5rem;
-  margin-right: 10px;
-  background-color: var(--light-green-color);
-} */
+.calls-info ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 20.5px;
+}
 
-.fas fa-square square-icon {
+.calls-info ul li span {
     font-size: 20px;
     color: var(--light-green-color);
+    margin-right: 10px;
 }
 
 .calls-info ul li {
   margin-bottom: 5px;
-  color: var(--light-gray-color);
+  color: var(--white);
+  gap: 1rem;
 }
 
 .calls-form input[type="text"],
 .calls-form input[type="email"],
 .calls-form select,
 .calls-form button {
-  padding: 10px;
+  display: block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.3125rem;
+  padding-inline: 2px;
+  line-height:2rem;
   margin-bottom: 10px;
   border: none;
   border-radius: 5px;
   width: 100%;
+  cursor: text;
+  color: var(--white);
+}
+
+.calls-form #name, #phone, #email{
+  color: var(--white);
+}
+
+.calls-form input[type="text"],
+.calls-form input[type="email"],
+.calls-form select{
+    border: 1px solid var(--form-input-border-color);
+    background-color: var(--form-input-bg-color);
+    color: var(--white);
 }
 
 .calls-form button {

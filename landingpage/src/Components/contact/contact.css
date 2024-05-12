@@ -8,14 +8,15 @@ html {
 .contact-container {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 20px 20px 100px 20px;
     background-color:transparent;
     color: var(--dark-gray-color);
     height: 100vh;
+    font: 400 1rem / 1.5rem "Open Sans", sans-serif;
 }
 
 .contact-form, .contact-info {
-    display: table-row;
+    display: flex;
     flex-direction: column;
     max-width: 50%;
     padding-top: 7rem;
@@ -25,14 +26,13 @@ html {
 }
 
 .contact-info {
-    width: 45%;
     padding-left: 5rem;
 }
 
 .contact-form {
-    width: 45%;
     padding-right: 5rem;
-    padding-left: 0;
+    box-sizing: border-box;
+    position: relative;
 }
 
 .section-title {
