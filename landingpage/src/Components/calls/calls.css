@@ -20,8 +20,8 @@ html {
   display: flex;
   flex-direction: column;
   width: 50%;
-  padding-top: 7rem;
-  padding-bottom: 5.625rem;
+  padding-top: 2.5rem;
+  align-content: center;
   box-sizing: border-box;
   position: relative;
   

@@ -128,6 +128,12 @@
     color: var(--dark-gray-color);
 }
 
+.lp_service-list-container ul li span {
+    font-size: 20px;
+    color: var(--light-green-color);
+    margin-right: 10px;
+}
+
 .service-item h6 {
     font-size: 16px;
     font-weight: bold;

@@ -1,8 +1,6 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaPinterest, FaInstagram, FaLinkedin, FaBehance , FaPhone } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaPinterest, FaInstagram, FaLinkedin, FaBehance, FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { FaLocationDot } from "@fortawesome/free-solid-svg-icons";
-import { MapPin, Mail } from 'lucide-react';
 import "./contact.css";
 
 const Contact = () => (
@@ -16,53 +14,44 @@ const Contact = () => (
           contact form beginning questioned and inquires
         </p>
         <ul>
-          <li>
-           <MapPin />22nd Inovative street, San Francisco, CA 94043, US
-          </li>
-          <li>
-            <FaPhone />+81 720 22 128
-          </li>
-          <li>
-            <FaPhone />+81 720 22 126
-          </li>
-          <li>
-            <Mail />office@domain.com
-          </li>
+          <li><span><FaMapMarkerAlt /></span>22nd Inovative street, San Francisco, CA 94043, US</li>
+          <li><span><FaPhone /></span>+81 720 22 128 <span><FaPhone /></span>+81 720 22 126</li>
+          <li><span><FaEnvelope /></span>office@domain.com</li>
         </ul>
-        <br />
+        <br />     
         <h3>Follow Aria on Social Media</h3>
         <div className="social-link-list-container">
-      <div className="social-link-item">
-        <span>
-          <FaFacebookF />
-        </span>
-      </div>
-      <div className="social-link-item">
-        <span>
-          <FaTwitter />
-        </span>
-      </div>
-      <div className="social-link-item">
-        <span>
-          <FaPinterest />
-        </span>
-      </div>
-      <div className="social-link-item">
-        <span>
-          <FaInstagram />
-        </span>
-      </div>
-      <div className="social-link-item">
-        <span>
-          <FaLinkedin />
-        </span>
-      </div>
-      <div className="social-link-item">
-        <span>
-          <FaBehance />
-        </span>
-      </div>
-    </div>
+          <div className="social-link-item">
+            <span>
+              <FaFacebookF />
+            </span>
+          </div>
+          <div className="social-link-item">
+            <span>
+              <FaTwitter />
+            </span>
+          </div>
+          <div className="social-link-item">
+            <span>
+              <FaPinterest />
+            </span>
+          </div>
+          <div className="social-link-item">
+            <span>
+              <FaInstagram />
+            </span>
+          </div>
+          <div className="social-link-item">
+            <span>
+              <FaLinkedin />
+            </span>
+          </div>
+          <div className="social-link-item">
+            <span>
+              <FaBehance />
+            </span>
+          </div>
+        </div>
         <form className="contact-form">
           <input type="text" placeholder="Name" required />
           <input type="email" placeholder="Email" required />
@@ -77,6 +66,6 @@ const Contact = () => (
       </div>
     </div>
   </div>
-)
-            
+);
+
 export default Contact;

@@ -59,14 +59,14 @@ html {
     padding: 0;
 }
 
-.fas fa-square square-icon {
-    font-size: 20px;
-    color: var(--light-green-color);
-}
-
 .contact-info ul li {
     margin-bottom: 5px;
     color: var(--light-gray-color);
+}
+
+.contact-info ul li span{
+    color: var(--light-green-color);
+    margin-left: 10px;
 }
 
 .social-link-list-container {

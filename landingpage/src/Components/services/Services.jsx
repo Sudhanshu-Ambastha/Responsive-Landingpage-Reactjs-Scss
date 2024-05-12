@@ -15,9 +15,9 @@ const Services = () => (
             Perfect for fresh ideas or young startups, this packages will help to get the business off the ground.
           </p>  
           <ul>
-            <i className="fas fa-square square-icon"></i><li>Environment and competition</li>
+            <li><span>&#9632;</span>Environment and competition</li>
             <br />
-            <i className="fas fa-square square-icon"></i><li>Design the marketing plan</li>
+            <li><span>&#9632;</span>Design the marketing plan</li>
           </ul>
           <h6>Starting at <span className='price'>$199</span></h6>
           <button>Details</button>
@@ -29,11 +29,11 @@ const Services = () => (
 
           <p>
             Use this service pack to give your company the necessary impulse to become an industry leader
-          </p>  
+          </p>
+          <br />
           <ul>
-            <i className="fas fa-square square-icon"></i><li>Business strategy planning</li>
-            <br />
-            <i className="fas fa-square square-icon"></i><li>Taking the planned actions</li>
+            <li><span>&#9632;</span>Business strategy planning</li>
+            <li><span>&#9632;</span>Taking the planned actions</li>
           </ul>
           <h6>Starting at <span className='price'>$299</span></h6>
           <button>Details</button>
@@ -46,8 +46,8 @@ const Services = () => (
             You already are a reference point in your industry now you need to learn about acquisitions
           </p>  
           <ul>
-            <i className="fas fa-square square-icon"></i><li>Maintaining the leader status</li>
-            <i className="fas fa-square square-icon"></i><li>Acquisitions the right way</li>
+            <li><span>&#9632;</span>Maintaining the leader status</li>
+            <li><span>&#9632;</span>Acquisitions the right way</li>
           </ul>
           <h6>Starting at <span className='price'>$299</span></h6>
           <button>Details</button>
