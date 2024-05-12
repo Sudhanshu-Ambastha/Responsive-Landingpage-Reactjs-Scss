@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { FaBinoculars, FaListAlt, FaChartPie } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './intro.css';
 
 const Intro = () => (
@@ -17,18 +18,18 @@ const Intro = () => (
             <br />
             <p className="lp_italic">
                 "Our mission here at Aria is to get you through those tough moments relying on our team's
-                expertise in starting and growing companies." I
+                expertise in starting and growing companies."
             </p>
             <br />
             <h4>Louise Donovan - CEO</h4>    
         </div>
         <div className="lp_container">
-        <div className="img"></div>  
+        <div className="Girlswing" />
         </div>
         </div>
         <div className="lp_skill-list-container">
-        <div className="lp_skill-item">
-        <span><i class="fa-solid fa-binoculars"></i></span>
+        <div className="lp_skill-card">
+        <span><FaBinoculars /></span>
         <h4>Environment Analysis</h4>
         <br />
         <p>
@@ -36,8 +37,8 @@ const Intro = () => (
             environment.
         </p>
         </div>
-        <div className="lp_skill-item">
-        <span><i class="fa-solid fa-rectangle-list"></i></span>
+        <div className="lp_skill-card">
+        <span><FaListAlt /></span>
         <h4>Development Planing</h4>
         <br />
         <p>
@@ -45,8 +46,8 @@ const Intro = () => (
             development strategy
         </p>
         </div>
-        <div className="lp_skill-item">
-        <span><i class="fa-solid fa-chart-pie"></i></span>
+        <div className="lp_skill-card">
+        <span><FaChartPie /></span>
         <h4>Execution and evaluation</h4>
         <br />
         <p>

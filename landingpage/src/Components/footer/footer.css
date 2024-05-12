@@ -1,6 +1,6 @@
 /* footer.css */
 .footer {
-    background-color: #333;
+    background-color: var(--dark-green-color);
     padding: 60px 0;
 }
 

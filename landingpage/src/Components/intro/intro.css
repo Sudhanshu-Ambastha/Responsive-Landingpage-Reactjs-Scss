@@ -1,0 +1,135 @@
+.intro {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.lp_section-title {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: bold;
+    color: var(--light-green-color);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.lp_skill-list-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.lp_skill-card {
+    flex-basis: 30%;
+    text-align: center;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.lp_skill-card span {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.5rem 1rem;
+    width: 3rem;
+    height: 3rem;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    background-color: var(--light-green-color);
+    color: var(--white);
+    font-size: 2rem;
+    line-height: 1rem;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    font: 900;
+}
+
+.lp_skill-card h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--dark-green-color);
+    margin-bottom: 10px;
+}
+
+.lp_skill-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--dark-gray-color);
+    margin-bottom: 0;
+}
+
+.lp_container {
+    padding-top: 6.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.lp_container .Girlswing {
+    background-image: url(../../assets/Girlswing.jpg);
+    top: 3rem;
+    height: 500px;
+    width: 500px;
+    margin-bottom: 20px;
+    display: block;
+    border-radius: 10px;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+.lp_text {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    float: left;
+    align-content: center;
+}
+
+.lp_text h2 {
+    padding-top: 6.875rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--dark-green-color);
+    margin-bottom: 20px;
+}
+
+.lp_text p {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: var(--dark-gray-color);
+    margin-bottom: 20px;
+}
+
+.lp_text .lp_italic {
+    font-style: italic;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: var(--dark-gray-color);
+    margin-bottom: 20px;
+}
+
+.lp_text h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--dark-green-color);
+    margin-bottom: 20px;
+}
+
+.lp_skill-item:nth-child(1) {
+    margin-right: 0;
+}
+
+.lp_skill-item:nth-child(3) {
+  margin-left: 3rem;
+}
+
+.lp_intro-bottom p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--dark-gray-color);
+  margin-bottom: 0;
+}
