@@ -57,6 +57,12 @@
     margin-right: 2rem;
 }
 
+.lp__navbar-links_container a:hover,
+.lp__navbar-links_container a.active {
+  color: var(--light-green-color);
+}
+
+
 .lp__navbar-links_container a {
     color: #fff;
     font-family: var(--font-family);
