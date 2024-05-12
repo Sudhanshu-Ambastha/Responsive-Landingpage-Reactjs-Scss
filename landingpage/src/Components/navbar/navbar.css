@@ -15,6 +15,7 @@
     padding: 1rem 1.5rem 1px 2rem;
     max-height: 5rem;
     background-color: var(--green-bg-color);
+    z-index: 2;
 }
 
 .lp__navbar-links {

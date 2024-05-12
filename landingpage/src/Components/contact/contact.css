@@ -15,7 +15,7 @@ html {
     font: 400 1rem / 1.5rem "Open Sans", sans-serif;
 }
 
-.contact-form, .contact-info {
+/*.contact-form,*/ .contact-info {
     display: flex;
     flex-direction: column;
     max-width: 50%;
@@ -29,11 +29,11 @@ html {
     padding-left: 5rem;
 }
 
-.contact-form {
+/* .contact-form {
     padding-right: 5rem;
     box-sizing: border-box;
     position: relative;
-}
+} */
 
 .section-title {
     display: block;
@@ -106,7 +106,7 @@ html {
     font-size: 18px;
 }
 
-.contact-form input[type="text"],
+/* .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form input[type="message"]
 .contact-form select,
@@ -117,22 +117,9 @@ html {
     border-radius: 5px;
     width: 100%;
     border: 1px solid var(--dark-gray-color);
-}
+} */
 
-.contact-form 
-
-.contact-form button {
-    background-color: var(--light-green-color);
-    color: var(--white);
-    cursor: pointer;
-    width: 100%;
-}
-
-.contact-form button:hover {
-    background-color: transparent;
-    color: var(--light-green-color);
-    border: 1px solid var(--light-green-color);
-}
+/* 
 
 .checkbox-container {
     display: block;
@@ -150,9 +137,9 @@ html {
     cursor: pointer;
     height: 0;
     width: 0;
-}
+} */
 
-.checkmark {
+/* .checkmark {
     position: absolute;
     top: 0;
     left: 0;
@@ -183,4 +170,4 @@ html {
     border: solid var(--white);
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
-}
+} */
