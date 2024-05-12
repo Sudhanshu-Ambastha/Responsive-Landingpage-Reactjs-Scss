@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
-    "@fortawesome/react-fontawesome": "^0.2.0"
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "lucide": "^0.378.0",
+    "lucide-react": "^0.378.0"
   }
 }

@@ -25,16 +25,6 @@ html {
     position: relative;
 }
 
-.contact-info {
-    padding-left: 5rem;
-}
-
-/* .contact-form {
-    padding-right: 5rem;
-    box-sizing: border-box;
-    position: relative;
-} */
-
 .section-title {
     display: block;
     font-size: 0.8125rem;
@@ -43,6 +33,10 @@ html {
     margin-bottom: 20px;
     text-transform: uppercase;
     text-align: left;
+}
+
+.contact-info {
+    padding-left: 5rem;
 }
 
 .contact-info h2,
@@ -106,7 +100,13 @@ html {
     font-size: 18px;
 }
 
-/* .contact-form input[type="text"],
+/* .contact-form {
+    padding-right: 5rem;
+    box-sizing: border-box;
+    position: relative;
+} 
+
+.contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form input[type="message"]
 .contact-form select,
@@ -117,9 +117,7 @@ html {
     border-radius: 5px;
     width: 100%;
     border: 1px solid var(--dark-gray-color);
-} */
-
-/* 
+} 
 
 .checkbox-container {
     display: block;
@@ -137,9 +135,9 @@ html {
     cursor: pointer;
     height: 0;
     width: 0;
-} */
+} 
 
-/* .checkmark {
+.checkmark {
     position: absolute;
     top: 0;
     left: 0;
