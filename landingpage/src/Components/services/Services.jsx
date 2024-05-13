@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import './services.css';
+import { Heading4 } from 'lucide-react';
 
 const Services = () => {
   const [activePoint, setActivePoint] = useState(1);
+  const [activeHeader, setActiveHeader] = useState(1);
 
   const handlePointClick = (point) => {
     setActivePoint(point);
+    setActiveHeader(point);
   };
 
   return (
@@ -21,6 +24,7 @@ const Services = () => {
           <p>
             Perfect for fresh ideas or young startups, this packages will help to get the business off the ground.
           </p>
+          <br />
           <ul>
             <li><span>&#9632;</span>Environment and competition</li>
             <li><span>&#9632;</span>Design the marketing plan</li>
@@ -30,9 +34,8 @@ const Services = () => {
         </div>
 
         <div className='service-item_2'>
-          <div className="Book"></div>
+          <div className="Book" />
           <h4>Accelerated Growth</h4>
-
           <p>
             Use this service pack to give your company the necessary impulse to become an industry leader
           </p>
@@ -46,7 +49,7 @@ const Services = () => {
         </div>
 
         <div className='service-item_3'>
-          <div className="Laptop"></div>
+          <div className="Laptop" />
           <h4>Market Domination</h4>
           <p>
             You already are a reference point in your industry now you need to learn about acquisitions
@@ -60,37 +63,31 @@ const Services = () => {
         </div>
       </div>
 
-      <div className='propositions propositions-1'>
-        <img src='./assets/Mountain.jpg' alt='Mountain' loading="lazy" />
-        <div className='content'>
-          <h3>Accelerate Business Growth To Improve Revenue Numbers</h3>
-          <h4 className={`${activePoint === 1 ? 'active' : ''}`} onClick={() => handlePointClick(1)}>
-            <span className='numbering'>1</span> How Can Aria Help Your Business
+       <div className='propositions propositions-1'>
+  <img src='./assets/Mountain.jpg' alt='Mountain' loading="lazy" />
+  <div className='content'>
+    <h3>Accelerate Business Growth To Improve Revenue Numbers</h3>
+    <div className='dropdown-container'>
+      {[1, 2, 3].map((point) => (
+        <div key={point} className={`dropdown ${activePoint === point ? 'active' : ''}`}>
+          <h4 onClick={() => handlePointClick(point)} style={{ color: activePoint === point ? '#14BF98' : 'inherit' }}>
+            <span className={`numbering ${activePoint === point ? 'active' : ''}`}>{point}</span>
+            {point === 1 ? 'How Can Aria Help Your Business' 
+            : point === 2 ? 'Great Strategic Business Planning' 
+            : 'Online Marketing Campaign'}
           </h4>
-          <br />
-          <p>
-            At Aria solutions we've taken the consultancy concept one step further by offering a full
-            service management organization with expertise.
-          </p>
-          <br />
-          <h4 className={`${activePoint === 2 ? 'active' : ''}`} onClick={() => handlePointClick(2)}>
-            <span className='numbering'>2</span> Great Strategic Business Planning
-          </h4>
-          <p>
-            Aria partners with businesses to business growth and 
-            development ideas including environment analysis, plan 
-            execution and evaluation.
-          </p>
-          <h4 className={`${activePoint === 3 ? 'active' : ''}`} onClick={() => handlePointClick(3)}>
-            <span className='numbering'>3</span> Online Marketing Campaign
-          </h4>
-          <p>
-            An awesome online marketing plan won't save your bad
-            product but paired with a good product, the sky is the limit for 
-            what can be achieved.
-          </p>
+          {activePoint === point && (
+            <p>
+              {point === 1 ? 'At Aria solutions we\'ve taken the consultancy concept one step further by offering a full service management organization with expertise.' 
+              : point === 2 ? 'Aria partners with businesses to business growth and development ideas including environment analysis, plan execution and evaluation.' 
+              : 'An awesome online marketing plan won\'t save your bad product but paired with a good product, the sky is the limit for what can be achieved.'}
+            </p>
+          )}
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
       <div className='propositions propositions-2'>
         <div className='content'>
           <div className='category-list-container'>

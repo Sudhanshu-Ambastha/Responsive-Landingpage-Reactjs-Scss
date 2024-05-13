@@ -23,6 +23,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 50px;
+    margin-left: 10rem;
 }
 
 .service-item_1, .service-item_2, .service-item_3 {
@@ -221,6 +222,10 @@
   color: var(--light-green-color);
 }
 
+.propositions.propositions-1 h4:hover {
+  color: var(--light-green-color);
+}
+
 .propositions .numbering {
   font-size: 14px;
   font-weight: bold;
@@ -236,6 +241,12 @@
   transition: all 0.2s ease;
 }
 
+
+.propositions.propositions-1 h4:hover span.numbering{
+  color: var(--light-green-color);
+  border-color: var(--light-green-color);
+}
+
 .propositions .numbering.active {
   border-color: var(--light-green-color);
   background-color: var(--light-green-color);
@@ -247,4 +258,57 @@
   color: var(--dark-gray-color);
   line-height: 1.5;
   margin-bottom: 20px;
+}
+
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.dropdown {
+  margin-bottom: 20px;
+}
+
+.dropdown h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--dark-gray-color);
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.dropdown h4 span.numbering {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--dark-gray-color);
+  margin-right: 10px;
+  border: 1px solid var(--dark-gray-color);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.dropdown.active h4 span.numbering {
+  border-color: var(--light-green-color);
+  background-color: var(--light-green-color);
+  color: var(--white);
+}
+
+.dropdown p {
+  font-size: 16px;
+  color: var(--dark-gray-color);
+  line-height: 1.5;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.dropdown.active p {
+  display: block;
 }

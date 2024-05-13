@@ -52,6 +52,7 @@ const Contact = () => (
             </span>
           </div>
         </div>
+        </div>
         <form className="contact-form">
           <input type="text" placeholder="Name" required />
           <input type="email" placeholder="Email" required />
@@ -65,7 +66,6 @@ const Contact = () => (
         </form>
       </div>
     </div>
-  </div>
 );
 
 export default Contact;

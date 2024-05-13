@@ -15,7 +15,7 @@ html {
     font: 400 1rem / 1.5rem "Open Sans", sans-serif;
 }
 
-/*.contact-form,*/ .contact-info {
+.contact-form, .contact-info {
     display: flex;
     flex-direction: column;
     max-width: 50%;
@@ -100,7 +100,7 @@ html {
     font-size: 18px;
 }
 
-/* .contact-form {
+ .contact-form {
     padding-right: 5rem;
     box-sizing: border-box;
     position: relative;
@@ -108,7 +108,6 @@ html {
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
-.contact-form input[type="message"]
 .contact-form select,
 .contact-form button {
     padding: 10px;
@@ -118,6 +117,23 @@ html {
     width: 100%;
     border: 1px solid var(--dark-gray-color);
 } 
+
+
+.contact-form input[type="message"]{
+    padding: 2px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 10rem;
+    border: 1px solid var(--dark-gray-color);
+    /* white-space: pre-wrap; */
+    /* cursor: text;
+    text-align: start; */
+    /* appearance: auto;
+    -webkit-rtl-ordering: logical; */
+    /* text-rendering: auto; */
+}
 
 .checkbox-container {
     display: block;
@@ -143,7 +159,8 @@ html {
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: var(--white);
+    border: 1px solid var(--dark-gray-color);
+    border-radius: 5px;
 }
 
 .checkbox-container input:checked~.checkmark {
@@ -168,4 +185,4 @@ html {
     border: solid var(--white);
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
-} */
+} 
