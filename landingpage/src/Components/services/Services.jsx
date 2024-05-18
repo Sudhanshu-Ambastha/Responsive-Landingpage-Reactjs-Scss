@@ -18,8 +18,9 @@ const Services = () => {
         <br />
         That Suits Your Needs</h2>
       <div className='lp_service-list-container'>
-        <div className='service-item_1'>
-          <div className="Coffeecup" />
+        <div className='service-item_2'>
+          <div className="CC" />
+          {/* <div className="Book" /> */}
           <h4>Off The Ground Off The Ground</h4>
           <p>
             Perfect for fresh ideas or young startups, this packages will help to get the business off the ground.
@@ -63,8 +64,9 @@ const Services = () => {
         </div>
       </div>
 
+       
        <div className='propositions propositions-1'>
-  <img src='./assets/Mountain.jpg' alt='Mountain' loading="lazy" />
+  <div className='img' />
   <div className='content'>
     <h3>Accelerate Business Growth To Improve Revenue Numbers</h3>
     <div className='dropdown-container'>
@@ -90,9 +92,10 @@ const Services = () => {
 </div>
       <div className='propositions propositions-2'>
         <div className='content'>
+        <div className='img'/>
           <div className='category-list-container'>
             <div className='category-item active'>
-              <h3><i className="fa fa-th" aria-hidden="true"></i>Business</h3>
+              <h3><span>/f00a</span>Business</h3>
             </div>
             <div className='category-item'>
               <h3><i className="fa fa-th" aria-hidden="true"></i>Expertise</h3>

@@ -23,7 +23,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 50px;
-    margin-left: 10rem;
+    margin-left: 0;
 }
 
 .service-item_1, .service-item_2, .service-item_3 {
@@ -39,18 +39,28 @@
     border-radius: 10px;
 }
 
-.service-item_1 .Coffeecup{
-  background-image: url(../../assets/Coffeecup.jpg);
-  top: 0;
+/* .service-item_1 .CC{
+  margin-top: -1.19rem;
+    background-image: url(../../assets/CC.jpg);
+    height: 200px;
+    width: 300px;
+    margin-bottom: 20px;
+    display: block;
+    border-radius: 10px;
+} */
+.service-item_2 .CC{
+  margin-top: -1.19rem;
+  background-image: url(../../assets/CC.jpeg);
   height: 200px;
   width: 300px;
-  margin-bottom: 20px;
-  display: block;
-  border-radius: 10px;
-  background-size: cover;
   align-items: center;
-  justify-content: center;
+  object-fit: contain;
+  border-radius: 10px;
+  justify-self: center;
+  background-size: cover;
+  margin-bottom: 1rem;
 }
+
 
 .service-item_2 .Book{
   margin-top: -1.19rem;
@@ -61,6 +71,7 @@
   display: block;
   border-radius: 10px;
 }
+
 .service-item_3 .Laptop{
   margin-top: -1.19rem;
   background-image: url(../../assets/Laptop.jpg);
@@ -163,15 +174,15 @@
 }
 
 .service-item button {
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--light-green-color);
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--light-green-color);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .service-item button:hover {
@@ -187,7 +198,7 @@
   margin-top: 50px;
 }
 
-.propositions img {
+.propositions.propositions-1 .img {
   background-image: url(../../assets/Mountain.jpg);
   width: 50%;
   height: 100%;
@@ -311,4 +322,16 @@
 
 .dropdown.active p {
   display: block;
+}
+
+.fa-th:before {
+    content: "\f00a";
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.testimonial .testimonial-list-container .testimonial-item .img{
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
