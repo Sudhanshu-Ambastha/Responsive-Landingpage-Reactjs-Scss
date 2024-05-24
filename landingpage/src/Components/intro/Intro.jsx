@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaBinoculars, FaListAlt, FaChartPie } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import './intro.css';
+import './intro.scss';
 
 const Intro = () => (
   <div className="lp__header section__padding" id="home">

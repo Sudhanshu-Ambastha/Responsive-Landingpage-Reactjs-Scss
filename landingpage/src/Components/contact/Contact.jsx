@@ -1,7 +1,7 @@
 import React from "react";
 import { FaFacebookF, FaTwitter, FaPinterest, FaInstagram, FaLinkedin, FaBehance, FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./contact.css";
+import "./contact.scss";
 
 const Contact = () => (
   <div>

@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 import { Navbar, Home, Intro, Services, Calls, Project, Contact,Footer} from './Components';
 
 const App = () => (

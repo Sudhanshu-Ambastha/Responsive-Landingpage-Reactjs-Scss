@@ -1,5 +1,5 @@
 import React from "react";
-import "./calls.css";
+import "./calls.scss";
 
 const About = () => (
   <div>

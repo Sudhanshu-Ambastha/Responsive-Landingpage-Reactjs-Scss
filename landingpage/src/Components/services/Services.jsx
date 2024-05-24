@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './services.css';
+import './services.scss';
 import { Heading4 } from 'lucide-react';
 
 const Services = () => {
@@ -18,7 +18,7 @@ const Services = () => {
         <br />
         That Suits Your Needs</h2>
       <div className='lp_service-list-container'>
-        <div className='service-item_2'>
+        <div className='service-item_1'>
           <div className="CC" />
           {/* <div className="Book" /> */}
           <h4>Off The Ground Off The Ground</h4>

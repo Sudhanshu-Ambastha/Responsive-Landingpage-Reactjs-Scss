@@ -1,0 +1,288 @@
+@import "../../variables.module.scss";
+
+.lp__header_section__padding {
+  padding: 100px 0;
+  background-color: $bg-color;
+
+  .lp_section-title {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: bold;
+    color: $light-green-color;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  h2 {
+    color: $dark-gray-color;
+    text-align: center;
+  }
+}
+
+.lp_service-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  margin-left: 0;
+
+  .service-item_1,
+  .service-item_2,
+  .service-item_3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 20px;
+    background-color: $white;
+    border-radius: 10px;
+
+    h4 {
+      font-size: 20px;
+      font-weight: bold;
+      color: $dark-gray-color;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      color: $dark-gray-color;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      li {
+        margin: 0 10px;
+        font-size: 14px;
+        color: $dark-gray-color;
+
+        &:before {
+          color: $light-green-color;
+        }
+      }
+    }
+
+    // .lp_service-list-container ul li span {
+    //   font-size: 20px;
+    //   color: $light-green-color;
+    //   margin-right: 10px;
+    // }
+
+    h6 {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .price {
+        font-size: 1rem;
+        color: $light-green-color;
+        margin-right: 10px;
+        margin-bottom: 0.25rem;
+        font-weight: bold;
+        margin-left: 5px;
+      }
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      background-color: $light-green-color;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: transparent;
+        color: $light-green-color;
+        border: 1px solid $light-green-color;
+      }
+    }
+
+    .CC {
+      margin-top: -1.19rem;
+      height: 200px;
+      width: 300px;
+      background-size: cover;
+      border-radius: 10px;
+      background-image: url(../../assets/CC.jpeg);
+
+      &.service-item_1 {
+        align-items: center;
+        object-fit: contain;
+        justify-self: center;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .Book {
+      margin-top: -1.19rem;
+      height: 200px;
+      width: 300px;
+      background-image: url(../../assets/Book.jpg);
+      margin-bottom: 20px;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .Laptop {
+      margin-top: -1.19rem;
+      height: 200px;
+      width: 300px;
+      background-image: url(../../assets/Laptop.jpg);
+      margin-bottom: 20px;
+      display: block;
+      border-radius: 10px;
+      object-position: center;
+      object-fit: contain;
+      background-size: cover;
+      align-items: start;
+      justify-content: start;
+    }
+  }
+}
+
+.propositions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+
+  &.propositions-1 {
+    .img {
+      background-image: url(../../assets/Mountain.jpg);
+      width: 50%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .content {
+      width: 50%;
+      padding: 20px;
+      box-sizing: border-box;
+
+      h3 {
+        font-size: 24px;
+        font-weight: bold;
+        color: $dark-gray-color;
+        margin-bottom: 20px;
+      }
+
+      h4 {
+        font-size: 18px;
+        font-weight: bold;
+        color: $dark-gray-color;
+        margin-bottom: 10px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+
+        &.active,
+        &:hover {
+          color: $light-green-color;
+        }
+
+        span.numbering {
+          font-size: 14px;
+          font-weight: bold;
+          color: $dark-gray-color;
+          margin-right: 10px;
+          border: 1px solid $dark-gray-color;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.2s ease;
+
+          &.active {
+            border-color: $light-green-color;
+            background-color: $light-green-color;
+            color: $white;
+          }
+        }
+      }
+
+      p {
+        font-size: 16px;
+        color: $dark-gray-color;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .dropdown {
+    margin-bottom: 20px;
+
+    h4 {
+      font-size: 18px;
+      font-weight: bold;
+      color: $dark-gray-color;
+      margin-bottom: 10px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+
+      span.numbering {
+        font-size: 14px;
+        font-weight: bold;
+        color: $dark-gray-color;
+        margin-right: 10px;
+        border: 1px solid $dark-gray-color;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+
+        &.active {
+          border-color: $light-green-color;
+          background-color: $light-green-color;
+          color: $white;
+        }
+      }
+    }
+
+    p {
+      font-size: 16px;
+      color: $dark-gray-color;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}

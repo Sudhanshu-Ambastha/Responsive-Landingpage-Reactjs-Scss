@@ -1,0 +1,36 @@
+@import "../../variables.module.scss";
+
+.bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("../../assets/Lakeview.jpg");
+  width: 89.2rem;
+  height: 50rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: $white;
+  gap: 1.5rem;
+  margin-top: -9.43rem;
+  right: 10rem;
+
+  h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1.5rem;
+    width: 50%;
+    color: $white;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

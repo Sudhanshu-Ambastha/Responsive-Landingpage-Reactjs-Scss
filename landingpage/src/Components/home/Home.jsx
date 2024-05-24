@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './home.css';
+import './home.scss';
 
 const Home = () => {
   const [index, setIndex] = useState(0);

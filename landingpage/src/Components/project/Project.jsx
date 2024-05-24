@@ -1,8 +1,8 @@
 import React from 'react';
-import './project.css';
+import './project.scss';
 
 const Project = () => (
-  <div className="gpt3__header section__padding" id="home">
+ <div className="lp_headers_section_padding" id="home">
   <section>
     <span class="section-title">PROJECTS</span>
           <h3>Projects That We've Proud of</h3>
@@ -28,40 +28,46 @@ const Project = () => (
           <div class="project-list-container">
           <div className="project-item-container">
             <div class="project-item p-1">
-            </div>
             <h3>Online Banking</h3>
+            </div> 
           </div>
           <div className="project-item-container">
-            <div class="project-item p-2"></div>
+            <div class="project-item-p-2">
             <h3>Classic Industry</h3>
+            </div>
           </div>
           <div className="project-item-container">
-            <div class="project-item p-3"></div>
-            <h3>BoomBap Audio</h3>
+            <div class="project-item p-3">
+              <h3>BoomBap Audio</h3>
+            </div>
           </div>
           <div className="project-item-container">
-            <div class="project-item p-4"></div>
+            <div class="project-item p-4">
             <h3>Van Moose</h3>
+            </div>
           </div>
           <div className="project-item-container">
-            <div class="project-item p-5"></div>
+            <div class="project-item p-5">
             <h3>Jay Moments</h3>
+            </div>
           </div> 
           <div className="project-item-container">
-            <div class="project-item p-6"></div>
+            <div class="project-item p-6">
             <h3>Spark Events</h3>
+            </div>
           </div> 
           <div className="project-item-container">
-            <div class="project-item p-7"></div>
+            <div class="project-item p-7">
             <h3>Casual Wear</h3>
+            </div>
           </div>
           <div className="project-item-container">
-            <div class="project-item p-8"></div>
+            <div class="project-item p-8">
             <h3>Zazoo Apps</h3>
+            </div>
           </div>
           </div>
           </section>
-
           <section className="team">
             <h3>Our Team of Consultants</h3>
             <p>
