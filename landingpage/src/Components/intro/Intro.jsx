@@ -23,8 +23,10 @@ const Intro = () => (
             <br />
             <h4>Louise Donovan - CEO</h4>    
         </div>
-        <div className="lp_container">
-        <div className="Girlswing" />
+        <div class="lp_container">
+        <div class="girlswing-wrapper">
+        <div class="Girlswing" />
+        </div>
         </div>
         </div>
         <div className="lp_skill-list-container">

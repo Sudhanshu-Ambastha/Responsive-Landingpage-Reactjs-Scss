@@ -74,21 +74,32 @@
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+  position: relative;
+
+  .girlswing-wrapper {
+    overflow: hidden;
+    height: 500px;
+    width: 500px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
 
   .Girlswing {
     background-image: url(../../assets/Girlswing.jpg);
-    top: 3rem;
-    height: 500px;
-    width: 500px;
-    margin-bottom: 20px;
-    display: block;
-    border-radius: 10px;
+    height: 100%;
+    width: 100%;
     background-size: cover;
-    align-items: center;
-    justify-content: center;
+    transition: transform 0.3s ease-out; /* Smooth transition */
+    cursor: pointer;
+  }
+
+  .Girlswing:hover {
+    transform: scale(1.1); /* Scale up */
   }
 }
-
 .lp_text {
   width: 50%;
   padding: 20px;
