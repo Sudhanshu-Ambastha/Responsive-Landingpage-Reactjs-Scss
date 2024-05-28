@@ -205,7 +205,7 @@ const Services = () => {
         <h3>Read Our Customer Testimonials</h3>
         <br />
         <p>
-          Our clients are our partners and we can not imagine a bettter future for our
+          Our clients are our partners and we can not imagine a better future for our
           <br />
           company without helping them reach their objectives
           <br />
