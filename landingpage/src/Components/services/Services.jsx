@@ -186,15 +186,15 @@ const Services = () => {
           <div className='skill-list-container'>
             <div className='skill-item'>
               <h6>Business Development 100%</h6>
-              <div className='progress-bar-p-100'><span><RectangleHorizontal/></span></div>
+              <div className='progress-bar-p-100'><RectangleHorizontal color="#14bf98" /></div>
             </div>
             <div className='skill-item'>
               <h6>Opportunity Spotting 76%</h6>
-              <div className='progress-bar-p-76'><RectangleHorizontal/></div>
+              <div className='progress-bar-p-76'><RectangleHorizontal color="#14bf98" /></div>
             </div>
             <div className='skill-item'>
               <h6>Online Marketing 90%</h6>
-              <div className='progress-bar-p-90'><RectangleHorizontal/></div>
+              <div className='progress-bar-p-90'><RectangleHorizontal color="#14bf98" /></div>
             </div>
           </div>
         </div>
