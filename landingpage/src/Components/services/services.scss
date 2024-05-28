@@ -163,78 +163,25 @@
 
   &.propositions-1 {
     .img {
-      background-image: url(../../assets/Mountain.jpg);
+      background-image: url("../../assets/Mountain.jpg");
       width: 50%;
-      height: 100%;
-      border-radius: 10px;
-      object-fit: cover;
+      height: 430px; // Adjust this height as necessary
+      background-size: cover;
+      background-position: center;
     }
 
     .content {
       width: 50%;
       padding: 20px;
       box-sizing: border-box;
-
-      h3 {
-        font-size: 24px;
-        font-weight: bold;
-        color: $dark-gray-color;
-        margin-bottom: 20px;
-      }
-
-      h4 {
-        font-size: 18px;
-        font-weight: bold;
-        color: $dark-gray-color;
-        margin-bottom: 10px;
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-
-        &.active,
-        &:hover {
-          color: $light-green-color;
-        }
-
-        span.numbering {
-          font-size: 14px;
-          font-weight: bold;
-          color: $dark-gray-color;
-          margin-right: 10px;
-          border: 1px solid $dark-gray-color;
-          border-radius: 50%;
-          width: 24px;
-          height: 24px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: all 0.2s ease;
-
-          &.active {
-            border-color: $light-green-color;
-            background-color: $light-green-color;
-            color: $white;
-          }
-        }
-      }
-
-      p {
-        font-size: 16px;
-        color: $dark-gray-color;
-        line-height: 1.5;
-        margin-bottom: 20px;
-      }
     }
-  }
-}
 
-.dropdown-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  .dropdown {
-    margin-bottom: 20px;
+    h3 {
+      font-size: 24px;
+      font-weight: bold;
+      color: $dark-gray-color;
+      margin-bottom: 20px;
+    }
 
     h4 {
       font-size: 18px;
@@ -244,6 +191,11 @@
       cursor: pointer;
       display: inline-flex;
       align-items: center;
+
+      &.active,
+      &:hover {
+        color: $light-green-color;
+      }
 
       span.numbering {
         font-size: 14px;
@@ -272,11 +224,207 @@
       color: $dark-gray-color;
       line-height: 1.5;
       margin-bottom: 20px;
-      display: none;
+    }
 
-      &.active {
-        display: block;
+    .dropdown-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .dropdown {
+        margin-bottom: 20px;
+
+        h4 {
+          font-size: 18px;
+          font-weight: bold;
+          color: $dark-gray-color;
+          margin-bottom: 10px;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+
+          span.numbering {
+            font-size: 14px;
+            font-weight: bold;
+            color: $dark-gray-color;
+            margin-right: 10px;
+            border: 1px solid $dark-gray-color;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+
+            &.active {
+              border-color: $light-green-color;
+              background-color: $light-green-color;
+              color: $white;
+            }
+          }
+        }
+
+        p {
+          font-size: 16px;
+          color: $dark-gray-color;
+          line-height: 1.5;
+          margin-bottom: 20px;
+          display: none;
+
+          &.active {
+            display: block;
+          }
+        }
       }
     }
+  }
+
+  &.propositions-2 {
+    .img {
+      margin-top: -3rem;
+      background-image: url("../../assets/Forest.jpg");
+      width: 76.5%;
+      height: 400px; // Adjust this height as necessary
+      background-size: cover;
+      background-position: center;
+    }
+
+    .content {
+      width: 75.5%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .category-list-container {
+      margin-bottom: -0.5rem;
+      border-bottom: none;
+      display: flex;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+      justify-content: space-evenly;
+    }
+
+    h3.propositions-2 {
+      color: $disabled-nav-content-color;
+
+      &:hover,
+      &.active {
+        color: $light-green-color;
+      }
+    }
+
+    .category-item h3 {
+      color: $disabled-nav-content-color;
+
+      &.hover,
+      &.active {
+        color: $light-green-color;
+      }
+    }
+    h3 {
+      font-size: 24px;
+      font-weight: bold;
+      color: $dark-gray-color;
+      margin-bottom: 0.5rem;
+      // margin-top: -4rem;
+    }
+    .skill-list-container .skill-item .progress-bar-p-100 {
+      width: 100%;
+      background: $light-green-color;
+      border-radius: 0.125rem;
+      display: block;
+      padding-left: 1.5rem;
+    }
+    // .skill-list-container .skill-item .progress-bar-p-100 .span {
+    //   background-color: $light-green-color;
+    // }
+    .skill-list-container .skill-item .progress-bar-p-76 {
+      width: 76%;
+      background: $light-green-color;
+      border-radius: 0.125rem;
+      display: block;
+      padding-left: 1.5rem;
+    }
+    .skill-list-container .skill-item .progress-bar-p-90 {
+      width: 90%;
+      background: $light-green-color;
+      border-radius: 0.125rem;
+      display: block;
+      padding-left: 1.5rem;
+    }
+  }
+}
+/* Testimonials Slider */
+.testimonials {
+  .testimonial-list-container {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-top: 4rem;
+  }
+
+  .testimonials-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .testimonials-list {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+
+  .testimonial-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem;
+    opacity: 0.5;
+    width: 300px;
+    flex-shrink: 0;
+
+    &.active {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      clip-path: circle(50% at 50% 50%);
+    }
+  }
+
+  .point-container {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+
+    .point {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+
+  .chevron {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    color: #fff;
+    font-size: 2rem;
   }
 }

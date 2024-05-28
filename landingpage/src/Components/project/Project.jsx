@@ -1,5 +1,6 @@
 import React from 'react';
 import './project.scss';
+import { FaFacebookF, FaTwitter } from 'react-icons/fa'; 
 
 const Project = () => (
  <div className="lp_headers_section_padding" id="home">
@@ -75,48 +76,72 @@ const Project = () => (
               <br />
               So here are the men and women customers meet goals and grow companies
             </p>
-            <div class="team-member-container">
+            <div className="team-member-container">
+            <div className="square-container" >
             <div className="profile-picture">
               <img src="https://xsgames.co/randomusers/assets/avatars/male/77.jpg" alt="Member 1" loading="lazy" />
+              </div>
               </div>
               <p>John Whitelong</p>
               <h5>General Manager</h5>
               <div class="social-links">
-                <span><i class="fa-brands fa-facebook-f"></i></span>
-                <span><i class="fa-brands fa-twitter"></i></span>
+                 <li className="icon">
+                  <FaFacebookF />
+                 </li>
+                 <li className="icon">
+                  <FaTwitter />
+                 </li>
               </div>
             </div>
-            <div class="team-member-container">
+            <div className="team-member-container">
+            <div className="square-container" >
             <div className="profile-picture" >
               <img src="https://xsgames.co/randomusers/assets/avatars/female/77.jpg" alt="Member 2" loading="lazy" />
               </div>
+            </div>
               <p>Veronica Smith</p>
               <h5>Business Developer</h5>
               <div class="social-links">
-                <span><i class="fa-brands fa-facebook-f"></i></span>
-                <span><i class="fa-brands fa-twitter"></i></span>
+                 <li className="icon">
+                  <FaFacebookF />
+                 </li>
+                 <li className="icon">
+                  <FaTwitter />
+                 </li>
               </div>
             </div>
-            <div class="team-member-container">
+            <div className="team-member-container">
+            <div className="square-container" >
             <div className="profile-picture">
               <img src="https://xsgames.co/randomusers/assets/avatars/male/76.jpg" alt="Member 3" loading="lazy" />
+              </div>
               </div>
               <p>Chris Zimerman</p>
               <h5>Online Marketer</h5>
               <div class="social-links">
-                <span><i class="fa-brands fa-facebook-f"></i></span>
-                <span><i class="fa-brands fa-twitter"></i></span>
+                 <li className="icon">
+                  <FaFacebookF />
+                 </li>
+                 <li className="icon">
+                  <FaTwitter />
+                 </li>
               </div>
             </div>
-            <div class="team-member-container">
+            <div className="team-member-container">
+            <div className="square-container">
             <div className="profile-picture">
               <img src="https://xsgames.co/randomusers/assets/avatars/female/70.jpg" alt="MEmber 4" loading="lazy" />
               </div>
+            </div>
               <p>Mary Villalonge</p>
               <h5>Community Manager</h5>
               <div class="social-links">
-                <span><i class="fa-brands fa-facebook-f"></i></span>
-                <span><i class="fa-brands fa-twitter"></i></span>
+                 <li className="icon">
+                  <FaFacebookF />
+                 </li>
+                 <li className="icon">
+                  <FaTwitter />
+                 </li>
               </div>
             </div>
             </section>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './services.scss';
-import { Heading4 } from 'lucide-react';
+import {Grid3X3, RectangleHorizontal, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Services = () => {
   const [activePoint, setActivePoint] = useState(1);
@@ -9,6 +9,60 @@ const Services = () => {
   const handlePointClick = (point) => {
     setActivePoint(point);
     setActiveHeader(point);
+  };
+
+  const testimonialData = [
+  {
+    image: 'https://xsgames.co/randomusers/assets/avatars/male/75.jpg',
+    text: 'At the beginning I thought the prices are a little high for what they offer but they over deliver each and every time.',
+    name: 'Ronald Spice - Owner',
+  },
+  {
+    image: 'https://xsgames.co/randomusers/assets/avatars/female/76.jpg',
+    text: 'I recommend Aria to every business owner or growth leader that wants to take his company to the next level',
+    name: 'Lindsay Rune - Manager',
+  },
+  {
+    image: 'https://xsgames.co/randomusers/assets/avatars/female/75.jpg',
+    text: 'My goals for using Aria\'s services seemed high when I first set them but they\'ve met them with no problem',
+    name: 'Ann Black - Consultant',
+  },
+  {
+    image: 'https://xsgames.co/randomusers/assets/avatars/male/73.jpg',
+    text: 'The guys from Aria helped with getting my business off the ground and turing into a profitable company.',
+    name: 'Jude Thorn - Founder',
+  },
+  {
+    image: 'https://xsgames.co/randomusers/assets/avatars/female/74.jpg',
+    text: 'I purchased the Growth Accelerator service pack a few years ago and I renewed the contract each year.',
+    name: 'Marsha Singer - Marketer',
+  },
+  {
+    image: 'https://xsgames.co/randomusers/assets/avatars/female/73.jpg',
+    text: 'Arias CDP personally attends client meetings and provides feedback on business growth strategies.',
+    name: 'Amy Smith - Developer',
+  },
+  {
+    image: 'https://xsgames.co/randomusers/assets/avatars/female/72.jpg',
+    text: 'I purchased the Growth Accelerator service pack a few years ago and I renewed the contract each year.',
+    name: 'Marsha Singer - Marketer',
+  },
+  {
+    image: 'https://xsgames.co/randomusers/assets/avatars/male/72.jpg',
+    text: 'At the beginning I thought the prices are a little high for what they offer deliver each and every time.',
+    name: 'Ronald Spice - Owner',
+  },
+  
+];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrevClick = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? testimonialData.length - 1 : prevIndex - 1));
+  };
+
+  const handleNextClick = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === testimonialData.length - 1 ? 0 : prevIndex + 1));
   };
 
   return (
@@ -64,43 +118,62 @@ const Services = () => {
       </div>
 
        
-       <div className='propositions propositions-1'>
-  <div className='img' />
-  <div className='content'>
-    <h3>Accelerate Business Growth To Improve Revenue Numbers</h3>
-    <div className='dropdown-container'>
-      {[1, 2, 3].map((point) => (
-        <div key={point} className={`dropdown ${activePoint === point ? 'active' : ''}`}>
-          <h4 onClick={() => handlePointClick(point)} style={{ color: activePoint === point ? '#14BF98' : 'inherit' }}>
-            <span className={`numbering ${activePoint === point ? 'active' : ''}`}>{point}</span>
-            {point === 1 ? 'How Can Aria Help Your Business' 
-            : point === 2 ? 'Great Strategic Business Planning' 
-            : 'Online Marketing Campaign'}
-          </h4>
-          {activePoint === point && (
-            <p>
-              {point === 1 ? 'At Aria solutions we\'ve taken the consultancy concept one step further by offering a full service management organization with expertise.' 
-              : point === 2 ? 'Aria partners with businesses to business growth and development ideas including environment analysis, plan execution and evaluation.' 
-              : 'An awesome online marketing plan won\'t save your bad product but paired with a good product, the sky is the limit for what can be achieved.'}
-            </p>
-          )}
+       <div className="propositions propositions-1">
+        <div className="img">
         </div>
-      ))}
-    </div>
-  </div>
-</div>
+        <div className="content">
+          <h3>Accelerate Business Growth To Improve Revenue Numbers</h3>
+          <div className="dropdown-container">
+            {[1, 2, 3].map((point) => (
+              <div
+                key={point}
+                className={`dropdown ${activePoint === point ? "active" : ""}`}
+              >
+                <h4
+                  onClick={() => handlePointClick(point)}
+                  style={{
+                    color: activePoint === point ? "#14BF98" : "inherit",
+                  }}
+                >
+                  <span
+                    className={`numbering ${
+                      activePoint === point ? "active" : ""
+                    }`}
+                  >
+                    {point}
+                  </span>
+                  {point === 1
+                    ? "How Can Aria Help Your Business"
+                    : point === 2
+                    ? "Great Strategic Business Planning"
+                    : "Online Marketing Campaign"}
+                </h4>
+                {activePoint === point && (
+                  <p>
+                    {point === 1
+                      ? "At Aria solutions we've taken the consultancy concept one step further by offering a full service management organization with expertise."
+                      : point === 2
+                      ? "Aria partners with businesses to business growth and development ideas including environment analysis, plan execution and evaluation."
+                      : "An awesome online marketing plan won't save your bad product but paired with a good product, the sky is the limit for what can be achieved."}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <div className='propositions propositions-2'>
         <div className='content'>
-        <div className='img'/>
           <div className='category-list-container'>
             <div className='category-item active'>
-              <h3><span>/f00a</span>Business</h3>
+              <h3><span><Grid3X3/></span>Business</h3>
             </div>
             <div className='category-item'>
-              <h3><i className="fa fa-th" aria-hidden="true"></i>Expertise</h3>
+              <h3><span><Grid3X3/></span>Expertise</h3>
             </div>
             <div className='category-item'>
-              <h3><i className="fa fa-th" aria-hidden="true"></i>Quality</h3>
+              <h3><span><Grid3X3/></span>Quality</h3>
             </div>
           </div>
           <br />
@@ -113,19 +186,20 @@ const Services = () => {
           <div className='skill-list-container'>
             <div className='skill-item'>
               <h6>Business Development 100%</h6>
-              <div className='progress-bar p-100'></div>
+              <div className='progress-bar-p-100'><span><RectangleHorizontal/></span></div>
             </div>
             <div className='skill-item'>
               <h6>Opportunity Spotting 76%</h6>
-              <div className='progress-bar p-76'></div>
+              <div className='progress-bar-p-76'><RectangleHorizontal/></div>
             </div>
             <div className='skill-item'>
               <h6>Online Marketing 90%</h6>
-              <div className='progress-bar p-90'></div>
+              <div className='progress-bar-p-90'><RectangleHorizontal/></div>
             </div>
           </div>
         </div>
-        <img src='./assets/Forest.jpg' alt='Forest' loading="lazy" />
+        <div className='img'/>
+        {/* <img src='./assets/Forest.jpg' alt='Forest' loading="lazy" /> */}
       </div>
       <div className='testimonials'>
         <h3>Read Our Customer Testimonials</h3>
@@ -137,88 +211,15 @@ const Services = () => {
           <br />
         </p>
       </div>
-      <div className='testimonial-list-container'>
-        <div className='testimonial-item'>
-          <img src='https://xsgames.co/randomusers/assets/avatars/male/75.jpg' alt='Customer 1' loading="lazy" />
-          <p className='italic'>
-            At the beginning I thought the prices are a little high for what they offer but they over
-            deliver each and every time.
-          </p>
-          <h4>
-            Ronald Spice - Owner
-          </h4>
-        </div>
-        <div className='testimonial-item'>
-          <img src='https://xsgames.co/randomusers/assets/avatars/female/76.jpg' alt='Customer 2' loading="lazy" />
-          <p className='italic'>
-            I recommend Aria to every business owner or growth leader that wants to take his company to
-            the next level
-          </p>
-          <h4>
-            Lindsay Rune - Manager
-          </h4>
-        </div>
-        <div className='testimonial-item'>
-          <img src='https://xsgames.co/randomusers/assets/avatars/female/75.jpg' alt='Customer 3' loading="lazy" />
-          <p className='italic'>
-            My goals for using Aria's services seemed high when I first set them but they've met them with
-            no problem
-          </p>
-          <h4>
-            Ann Black - Consultant
-          </h4>
-        </div>
-        <div className='testimonial-item'>
-          <img src='https://xsgames.co/randomusers/assets/avatars/male/73.jpg' alt='Customer 4' loading="lazy" />
-          <p className='italic'>
-            The guys from Aria helped with getting my business off the ground and turing into a
-            profitable company.
-          </p>
-          <h4>
-            Jude Thorn - Founder
-          </h4>
-        </div>
-        <div className='testimonial-item'>
-          <img src='https://xsgames.co/randomusers/assets/avatars/female/74.jpg' alt='Customer 5' loading="lazy" />
-          <p className='italic'>
-            I purchased the Growth Accelerator service pack a few years ago and I renewed the contract
-            each year.
-          </p>
-          <h4>
-            Marsha Singer - Marketer
-          </h4>
-        </div>
-        <div className='testimonial-item'>
-          <img src='https://xsgames.co/randomusers/assets/avatars/female/73.jpg' alt='Customer 6' loading="lazy" />
-          <p className='italic'>
-            Aria's CDP personally attends client meetings and his feedback on business growth
-            strategies.
-          </p>
-          <h4>
-            Any Smith - Developer
-          </h4>
-        </div>
-        <div className='testimonial-item'>
-          <img src='https://xsgames.co/randomusers/assets/avatars/female/72.jpg' alt='Customer 7' loading="lazy" />
-          <p className='italic'>
-            I purchased the Growth Accelerator service pack a few years ago and I renewed the contract
-            each year.
-          </p>
-          <h4>
-            Marsha Singer - Marketer
-          </h4>
-        </div>
-        <div className='testimonial-item'>
-          <img src='https://xsgames.co/randomusers/assets/avatars/male/72.jpg' alt='Customer 8' loading="lazy" />
-          <p className='italic'>
-            At the beginning I thought the prices are a little high for what they offer
-            deliver each and every time.
-          </p>
-          <h4>
-            Ronald Spice - Owner
-          </h4>
-        </div>
+    <div className="testimonial-list-container">
+      <ChevronLeft onClick={handlePrevClick} />
+      <div className="testimonial-item">
+        <img src={testimonialData[currentIndex].image} alt={testimonialData[currentIndex].name} loading="lazy" />
+        <p className="italic">{testimonialData[currentIndex].text}</p>
+        <h4>{testimonialData[currentIndex].name}</h4>
       </div>
+      <ChevronRight onClick={handleNextClick} />
+    </div>
     </div>
   );
 };
