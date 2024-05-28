@@ -20,15 +20,14 @@ const Services = () => {
       <div className='lp_service-list-container'>
         <div className='service-item_1'>
           <div className="CC" />
-          {/* <div className="Book" /> */}
           <h4>Off The Ground Off The Ground</h4>
           <p>
             Perfect for fresh ideas or young startups, this packages will help to get the business off the ground.
           </p>
           <br />
           <ul>
-            <li><span>&#9632;</span>Environment and competition</li>
-            <li><span>&#9632;</span>Design the marketing plan</li>
+            <li><span>🟩</span>Environment and competition</li>
+            <li><span>🟩</span>Design the marketing plan</li>
           </ul>
           <h6>Starting at <span className='price'>$199</span></h6>
           <button>Details</button>
@@ -42,8 +41,8 @@ const Services = () => {
           </p>
           <br />
           <ul>
-            <li><span>&#9632;</span>Business strategy planning</li>
-            <li><span>&#9632;</span>Taking the planned actions</li>
+            <li><span>🟩</span>Business strategy planning</li>
+            <li><span>🟩</span>Taking the planned actions</li>
           </ul>
           <h6>Starting at <span className='price'>$299</span></h6>
           <button>Details</button>
@@ -56,8 +55,8 @@ const Services = () => {
             You already are a reference point in your industry now you need to learn about acquisitions
           </p>
           <ul>
-            <li><span>&#9632;</span>Maintaining the leader status</li>
-            <li><span>&#9632;</span>Acquisitions the right way</li>
+            <li><span>🟩</span>Maintaining the leader status</li>
+            <li><span>🟩</span>Acquisitions the right way</li>
           </ul>
           <h6>Starting at <span className='price'>$299</span></h6>
           <button>Details</button>
