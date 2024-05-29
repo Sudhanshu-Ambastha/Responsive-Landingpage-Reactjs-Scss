@@ -6,7 +6,7 @@ const Project = () => (
  <div className="lp_headers_section_padding" id="home">
   <section>
     <span class="section-title">PROJECTS</span>
-          <h3>Projects That We've Proud of</h3>
+          <h2>Projects That We've Proud of</h2>
           <div class="category-list-container">
             <ul>
               <li>
@@ -28,7 +28,7 @@ const Project = () => (
           </div>
           <div class="project-list-container">
           <div className="project-item-container">
-            <div class="project-item p-1">
+            <div class="project-item-p-1">
             <h3>Online Banking</h3>
             </div> 
           </div>
@@ -38,32 +38,32 @@ const Project = () => (
             </div>
           </div>
           <div className="project-item-container">
-            <div class="project-item p-3">
+            <div class="project-item-p-3">
               <h3>BoomBap Audio</h3>
             </div>
           </div>
           <div className="project-item-container">
-            <div class="project-item p-4">
+            <div class="project-item-p-4">
             <h3>Van Moose</h3>
             </div>
           </div>
           <div className="project-item-container">
-            <div class="project-item p-5">
+            <div class="project-item-p-5">
             <h3>Jay Moments</h3>
             </div>
           </div> 
           <div className="project-item-container">
-            <div class="project-item p-6">
+            <div class="project-item-p-6">
             <h3>Spark Events</h3>
             </div>
           </div> 
           <div className="project-item-container">
-            <div class="project-item p-7">
+            <div class="project-item-p-7">
             <h3>Casual Wear</h3>
             </div>
           </div>
           <div className="project-item-container">
-            <div class="project-item p-8">
+            <div class="project-item-p-8">
             <h3>Zazoo Apps</h3>
             </div>
           </div>
@@ -79,7 +79,7 @@ const Project = () => (
             <div className="team-member-container">
             <div className="square-container" >
             <div className="profile-picture">
-              <img src="https://xsgames.co/randomusers/assets/avatars/male/77.jpg" alt="Member 1" loading="lazy" />
+              <img src="https://xsgames.co/randomusers/assets/avatars/male/2.jpg" alt="Member 1" loading="lazy" />
               </div>
               </div>
               <p>John Whitelong</p>
