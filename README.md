@@ -1,4 +1,4 @@
-# Responsive Landing Page with React.Js & Scss
+# Responsive Landing Page with React.js & Scss
 
 This project is a responsive landing page built using React.js. It is based on a design available on [Free CSS](https://www.free-css.com/assets/files/free-css-templates/preview/page259/aria/). The landing page features a header, main content section, and a footer. The main content section includes various sections such as About, Links, Tools, and Partners.
 
