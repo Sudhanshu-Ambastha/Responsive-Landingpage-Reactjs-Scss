@@ -6,7 +6,9 @@ const Project = () => (
  <div className="lp_headers_section_padding" id="home">
   <section>
     <span class="section-title">PROJECTS</span>
+    <br/>
           <h2>Projects That We've Proud of</h2>
+          <br/>
           <div class="category-list-container">
             <ul>
               <li>
