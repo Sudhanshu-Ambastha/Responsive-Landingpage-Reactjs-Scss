@@ -1,0 +1,158 @@
+@import "../../variables.module.scss";
+
+.intro {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.lp__header {
+  &.section__padding {
+    padding: 6.875rem 0;
+  }
+}
+
+.lp_section-title {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: bold;
+  color: $light-green-color;
+  margin-bottom: -5rem;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.lp_skill-list-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.lp_skill-card {
+  flex-basis: 30%;
+  text-align: left;
+  vertical-align: top;
+  margin-bottom: 2.5rem;
+  box-sizing: border-box;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  word-wrap: break-word;
+  display: inline-block;
+  max-width: 17.5rem;
+  position: relative;
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    width: 6rem;
+    height: 6rem;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    background-color: $light-green-color;
+    color: $white;
+    font-size: 2rem;
+    line-height: 6rem;
+    margin-bottom: 1rem;
+    font: 900;
+  }
+
+  h4 {
+    font: 700 1.25rem/1.625rem "Montserrat", sans-serif;
+    color: $dark-gray-color;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $dark-gray-color;
+    margin-bottom: 0;
+  }
+}
+
+.lp_container {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  position: relative;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+
+  .girlswing-wrapper {
+    overflow: hidden;
+    height: 500px;
+    width: 500px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .Girlswing {
+    background-image: url(../../assets/Girlswing.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    transition: transform 0.3s ease-out; /* Smooth transition */
+    cursor: pointer;
+    border: none;
+    margin-top: -3rem;
+  }
+
+  .Girlswing:hover {
+    transform: scale(1.1); /* Scale up */
+  }
+}
+.lp_text {
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  float: left;
+  align-content: center;
+
+  h2 {
+    padding-top: 6.875rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $dark-green-color;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: $dark-gray-color;
+    margin-bottom: 20px;
+
+    &.lp_italic {
+      font-style: italic;
+    }
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: $dark-green-color;
+    margin-bottom: 20px;
+  }
+}
+
+.lp_intro-bottom p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: $dark-gray-color;
+  margin-bottom: 0;
+}
