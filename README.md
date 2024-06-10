@@ -1,5 +1,44 @@
-# Responsive-Landingpage-Reactjs
+# Responsive Landing Page with React.js
 
-https://www.free-css.com/assets/files/free-css-templates/preview/page259/aria/
+This project is a responsive landing page built using React.js. It is based on a design available on [Free CSS](https://www.free-css.com/assets/files/free-css-templates/preview/page259/aria/). The landing page features a header, main content section, and a footer. The main content section includes various sections such as About, Links, Tools, and Partners.
 
-<img width="100%" alt="Certificate " src="landingpage/src/assets/certificate.jpg">
+## Preview
+
+## Certificate
+
+![Landing Page Preview](landingpage/src/assets/certificate.jpg)
+
+## Installation
+
+To run this project locally, follow these steps:
+
+1. Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/your-username/Responsive-Landingpage-Reactjs.git
+   ```
+
+2. Navigate to the project directory:
+   ```
+   cd landingpage
+   ```
+
+3. Install dependencies:
+   ```
+   npm install
+   ```
+4. Start the development server:
+   ```
+   npm start
+   ```
+
+## Technologies Used
+- `React.js`: A JavaScript library for building user interfaces.
+- `SCSS`: A CSS preprocessor that adds features like variables, mixins, and nesting to CSS.
+- `npm`: A package manager for Node.js packages.
+
+## Usage
+Feel free to modify and customize this landing page according to your needs. You can update the content, styles, or add new sections as required.
+
+## Credits
+Design Inspiration: [Free CSS - Aria Template](https://www.free-css.com/assets/files/free-css-templates/preview/page259/aria/)
