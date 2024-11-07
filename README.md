@@ -1,4 +1,4 @@
-# Responsive Landing Page with React.js & Scss
+# Responsive Landing Page with React.js & Sass
 
 This project is a responsive landing page built using React.js. It is based on a design available on [Free CSS](https://www.free-css.com/assets/files/free-css-templates/preview/page259/aria/). The landing page features a header, main content section, and a footer. The main content section includes various sections such as About, Links, Tools, and Partners.
 
@@ -26,7 +26,14 @@ To run this project locally, follow these steps:
 
 3. Install dependencies:
    ```
-   npm install
+   npm install && npm install sass
+   ```
+   ```
+   npm install @fortawesome/react-fontawesome && npm install @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons
+   ```
+   ```
+   npm install lucide-react && npm install react-icons
+
    ```
 4. Start the development server:
    ```
@@ -35,7 +42,7 @@ To run this project locally, follow these steps:
 
 ## Technologies Used
 - `React.js`: A JavaScript library for building user interfaces.
-- `SCSS`: A CSS preprocessor that adds features like variables, mixins, and nesting to CSS.
+- `SCSS`: A CSS pre-processor that adds features like variables, mix-ins, and nesting to CSS.
 - `npm`: A package manager for Node.js packages.
 
 ## Usage
