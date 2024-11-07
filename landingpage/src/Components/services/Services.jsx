@@ -13,7 +13,6 @@ const Services = () => {
     setActivePoint(point);
   };
   useEffect(() => {
-    // Create a circular array by duplicating first few items at the end
     const extendedData = [...testimonialsData, ...testimonialsData.slice(0, 3)];
     setTestimonialData(extendedData);
   }, []);
@@ -21,7 +20,6 @@ const Services = () => {
   const handlePrevClick = () => {
     setCurrentIndex((prevIndex) => {
       if (prevIndex === 0) {
-        // If at the start, jump to the end of original data
         return testimonialsData.length - 3;
       }
       return prevIndex - 1;
@@ -31,28 +29,25 @@ const Services = () => {
   const handleNextClick = () => {
     setCurrentIndex((prevIndex) => {
       if (prevIndex >= testimonialsData.length - 3) {
-        // If at the end, reset to start
         return 0;
       }
       return prevIndex + 1;
     });
   };
 
-  // Auto scroll effect with continuous loop
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => {
         if (prevIndex >= testimonialsData.length - 3) {
-          return 0; // Reset to start when reaching the end
+          return 0; 
         }
         return prevIndex + 1;
       });
-    }, 5000); // Changes every 5 seconds
+    }, 5000); 
 
     return () => clearInterval(interval);
   }, []);
 
-  // Update transform when currentIndex changes
   useEffect(() => {
     if (scrollContainerRef.current) {
       const translateValue = -(currentIndex * (100 / 3));

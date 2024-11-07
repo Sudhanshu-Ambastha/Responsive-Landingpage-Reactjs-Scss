@@ -1,51 +1,64 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
-import { FaFacebookF, FaTwitter, FaBars, FaTimes } from 'react-icons/fa'; 
+import { FaFacebookF, FaTwitter } from 'react-icons/fa';
 import logo from '../../assets/SALogo.png';
 import './navbar.scss';
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
-  window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.lp__navbar');
-    const homeSection = document.querySelector('#home');
-    const scrollPosition = window.scrollY;
-    // const navbarHeight = navbar.offsetHeight;
-    const gap = 10 * parseFloat(getComputedStyle(navbar).fontSize); // Convert rem to pixels
+  const [activeSection, setActiveSection] = useState('home');
+  const [isScrolled, setIsScrolled] = useState(false);
 
-    // Calculate the threshold scroll position based on the gap
-    const thresholdPosition = homeSection.offsetTop + gap;
+  useEffect(() => {
+  const handleScroll = () => {
+    const sections = document.querySelectorAll('section');
+    let currentSection = 'home';
 
-    // Add a class to change the background color when scrolling down
-    if (scrollPosition > thresholdPosition) {
-        navbar.classList.add('scrolling');
-    } else {
-        navbar.classList.remove('scrolling');
-    }
-});
+    // Setting scrolling state
+    setIsScrolled(window.scrollY > 20);
 
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (window.scrollY >= sectionTop - sectionHeight / 2 && window.scrollY < sectionTop + sectionHeight / 2) {
+        currentSection = section.getAttribute('id');
+      }
+    });
+
+    setActiveSection(currentSection);
+  };
+
+  window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleMenuClick = (section) => {
+    setActiveSection(section); // Set the active section immediately
+    setToggleMenu(false);
+    document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
-    <div className="lp__navbar">
+    <div className={`lp__navbar ${isScrolled ? 'scrolling' : ''} ${activeSection}`}>
       <div className="lp__navbar-links">
         <div className="lp__navbar-links_logo">
           <img src={logo} alt="logo" />
         </div>
         <div className="lp__navbar-links_container">
-          <p><a href="#home">Home</a></p>
-          <p><a href="#intro">Intro</a></p>
-          <p><a href="#services">Services</a></p>
-          <p><a href="#calls">Call Me</a></p>
-          <p><a href="#project">Project</a></p>
-          <p><a href="#contact">Contact</a></p>
+          <p><a href="#home" onClick={() => handleMenuClick('home')} className={activeSection === 'home' ? 'active' : ''}>Home</a></p>
+          <p><a href="#intro" onClick={() => handleMenuClick('intro')} className={activeSection === 'intro' ? 'active' : ''}>Intro</a></p>
+          <p><a href="#services" onClick={() => handleMenuClick('services')} className={activeSection === 'services' ? 'active' : ''}>Services</a></p>
+          <p><a href="#calls" onClick={() => handleMenuClick('calls')} className={activeSection === 'calls' ? 'active' : ''}>Call Me</a></p>
+          <p><a href="#project" onClick={() => handleMenuClick('project')} className={activeSection === 'project' ? 'active' : ''}>Project</a></p>
+          <p><a href="#contact" onClick={() => handleMenuClick('contact')} className={activeSection === 'contact' ? 'active' : ''}>Contact</a></p>
         </div>
       </div>
       <div className="lp__icon">
         <li className="icon">
-            <FaFacebookF />
+          <FaFacebookF />
         </li>
         <li className="icon">
-            <FaTwitter />
+          <FaTwitter />
         </li>
       </div>
       <div className="lp__navbar-menu">
@@ -55,18 +68,12 @@ const Navbar = () => {
         {toggleMenu && (
         <div className="lp__navbar-menu_container scale-up-center">
           <div className="lp__navbar-menu_container-links">
-          <li className="icon">
-           <FaBars />
-          </li>
-          <li className="icon">
-           <FaTimes />
-          </li>
-            <p><a href="#home">Home</a></p>
-            <p><a href="#intro">Intro</a></p>
-            <p><a href="#services">Services</a></p>
-            <p><a href="#calls">Call Me</a></p>
-            <p><a href="#project">Project</a></p>
-            <p><a href="#contact">Contact</a></p>
+            <p><a href="#home" onClick={() => handleMenuClick('home')} className={activeSection === 'home' ? 'active' : ''}>Home</a></p>
+            <p><a href="#intro" onClick={() => handleMenuClick('intro')} className={activeSection === 'intro' ? 'active' : ''}>Intro</a></p>
+            <p><a href="#services" onClick={() => handleMenuClick('services')} className={activeSection === 'services' ? 'active' : ''}>Services</a></p>
+            <p><a href="#calls" onClick={() => handleMenuClick('calls')} className={activeSection === 'calls' ? 'active' : ''}>Call Me</a></p>
+            <p><a href="#project" onClick={() => handleMenuClick('project')} className={activeSection === 'project' ? 'active' : ''}>Project</a></p>
+            <p><a href="#contact" onClick={() => handleMenuClick('contact')} className={activeSection === 'contact' ? 'active' : ''}>Contact</a></p>
           </div>
         </div>
         )}
