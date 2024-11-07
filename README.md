@@ -16,7 +16,7 @@ To run this project locally, follow these steps:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/Responsive-Landingpage-Reactjs.git
+   git clone https://github.com/Sudhanshu-Ambastha/Responsive-Landingpage-Reactjs-Scss.git
    ```
 
 2. Navigate to the project directory:
