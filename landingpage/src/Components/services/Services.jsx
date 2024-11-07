@@ -1,160 +1,166 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './services.scss';
-import {Grid3X3, RectangleHorizontal, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Grid3X3, RectangleHorizontal, ChevronLeft, ChevronRight } from 'lucide-react';
+import testimonialsData from './testimonials.json';
 
 const Services = () => {
+  const [testimonialData, setTestimonialData] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [activePoint, setActivePoint] = useState(1);
-  const [activeHeader, setActiveHeader] = useState(1);
-
+  const scrollContainerRef = useRef(null);
+  
   const handlePointClick = (point) => {
     setActivePoint(point);
-    setActiveHeader(point);
   };
-
-  const testimonialData = [
-  {
-    image: 'https://xsgames.co/randomusers/assets/avatars/male/75.jpg',
-    text: 'At the beginning I thought the prices are a little high for what they offer but they over deliver each and every time.',
-    name: 'Ronald Spice - Owner',
-  },
-  {
-    image: 'https://xsgames.co/randomusers/assets/avatars/female/76.jpg',
-    text: 'I recommend Aria to every business owner or growth leader that wants to take his company to the next level',
-    name: 'Lindsay Rune - Manager',
-  },
-  {
-    image: 'https://xsgames.co/randomusers/assets/avatars/female/75.jpg',
-    text: 'My goals for using Aria\'s services seemed high when I first set them but they\'ve met them with no problem',
-    name: 'Ann Black - Consultant',
-  },
-  {
-    image: 'https://xsgames.co/randomusers/assets/avatars/male/73.jpg',
-    text: 'The guys from Aria helped with getting my business off the ground and turing into a profitable company.',
-    name: 'Jude Thorn - Founder',
-  },
-  {
-    image: 'https://xsgames.co/randomusers/assets/avatars/female/74.jpg',
-    text: 'I purchased the Growth Accelerator service pack a few years ago and I renewed the contract each year.',
-    name: 'Marsha Singer - Marketer',
-  },
-  {
-    image: 'https://xsgames.co/randomusers/assets/avatars/female/73.jpg',
-    text: 'Arias CDP personally attends client meetings and provides feedback on business growth strategies.',
-    name: 'Amy Smith - Developer',
-  },
-  {
-    image: 'https://xsgames.co/randomusers/assets/avatars/female/72.jpg',
-    text: 'I purchased the Growth Accelerator service pack a few years ago and I renewed the contract each year.',
-    name: 'Marsha Singer - Marketer',
-  },
-  {
-    image: 'https://xsgames.co/randomusers/assets/avatars/male/72.jpg',
-    text: 'At the beginning I thought the prices are a little high for what they offer deliver each and every time.',
-    name: 'Ronald Spice - Owner',
-  },
-  
-];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
+  useEffect(() => {
+    // Create a circular array by duplicating first few items at the end
+    const extendedData = [...testimonialsData, ...testimonialsData.slice(0, 3)];
+    setTestimonialData(extendedData);
+  }, []);
 
   const handlePrevClick = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? testimonialData.length - 1 : prevIndex - 1));
+    setCurrentIndex((prevIndex) => {
+      if (prevIndex === 0) {
+        // If at the start, jump to the end of original data
+        return testimonialsData.length - 3;
+      }
+      return prevIndex - 1;
+    });
   };
 
   const handleNextClick = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === testimonialData.length - 1 ? 0 : prevIndex + 1));
+    setCurrentIndex((prevIndex) => {
+      if (prevIndex >= testimonialsData.length - 3) {
+        // If at the end, reset to start
+        return 0;
+      }
+      return prevIndex + 1;
+    });
+  };
+
+  // Auto scroll effect with continuous loop
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => {
+        if (prevIndex >= testimonialsData.length - 3) {
+          return 0; // Reset to start when reaching the end
+        }
+        return prevIndex + 1;
+      });
+    }, 5000); // Changes every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Update transform when currentIndex changes
+  useEffect(() => {
+    if (scrollContainerRef.current) {
+      const translateValue = -(currentIndex * (100 / 3));
+      scrollContainerRef.current.style.transform = `translateX(${translateValue}%)`;
+    }
+  }, [currentIndex]);
+
+  const renderVisibleTestimonials = () => {
+    return testimonialData.map((testimonial, index) => (
+      <div
+        key={index}
+        className="testimonial-item"
+      >
+        <img 
+          src={testimonial.image} 
+          alt={testimonial.name} 
+          loading="lazy"
+        />
+        <p className="italic">{testimonial.text}</p>
+        <h4>{testimonial.name}</h4>
+      </div>
+    ));
   };
 
   return (
     <div className="lp__header_section__padding" id="home">
-      <span className='lp_section-title'>Services</span>
-      <h2>Choose The Services Package
+      <span className="lp_section-title">Services</span>
+      <h2>
+        Choose The Services Package
         <br />
-        That Suits Your Needs</h2>
-      <div className='lp_service-list-container'>
-        <div className='service-item_1'>
+        That Suits Your Needs
+      </h2>
+
+      <div className="lp_service-list-container">
+        {/* Service Item 1 */}
+        <div className="service-item_1">
           <div className="CC" />
-          <h4>Off The Ground Off The Ground</h4>
+          <h4>Off The Ground</h4>
           <p>
-            Perfect for fresh ideas or young startups, this packages will help to get the business off the ground.
+            Perfect for fresh ideas or young startups, this package will help get your business off the ground.
           </p>
-          <br />
           <ul>
-            <li><span>🟩</span>Environment and competition</li>
-            <li><span>🟩</span>Design the marketing plan</li>
+            <li><span>🟩</span> Environment and competition</li>
+            <li><span>🟩</span> Design the marketing plan</li>
           </ul>
-          <h6>Starting at <span className='price'>$199</span></h6>
+          <h6>Starting at <span className="price">$199</span></h6>
           <button>Details</button>
         </div>
 
-        <div className='service-item_2'>
+        {/* Service Item 2 */}
+        <div className="service-item_2">
           <div className="Book" />
           <h4>Accelerated Growth</h4>
           <p>
-            Use this service pack to give your company the necessary impulse to become an industry leader
+            Use this service pack to give your company the necessary impulse to become an industry leader.
           </p>
-          <br />
           <ul>
-            <li><span>🟩</span>Business strategy planning</li>
-            <li><span>🟩</span>Taking the planned actions</li>
+            <li><span>🟩</span> Business strategy planning</li>
+            <li><span>🟩</span> Taking the planned actions</li>
           </ul>
-          <h6>Starting at <span className='price'>$299</span></h6>
+          <h6>Starting at <span className="price">$299</span></h6>
           <button>Details</button>
         </div>
 
-        <div className='service-item_3'>
+        {/* Service Item 3 */}
+        <div className="service-item_3">
           <div className="Laptop" />
           <h4>Market Domination</h4>
           <p>
-            You already are a reference point in your industry now you need to learn about acquisitions
+            You already are a reference point in your industry; now you need to learn about acquisitions.
           </p>
           <ul>
-            <li><span>🟩</span>Maintaining the leader status</li>
-            <li><span>🟩</span>Acquisitions the right way</li>
+            <li><span>🟩</span> Maintaining the leader status</li>
+            <li><span>🟩</span> Acquisitions the right way</li>
           </ul>
-          <h6>Starting at <span className='price'>$299</span></h6>
+          <h6>Starting at <span className="price">$399</span></h6>
           <button>Details</button>
         </div>
       </div>
 
-       
-       <div className="propositions propositions-1">
-        <div className="img">
-        </div>
+      {/* Propositions Section */}
+      <div className="propositions propositions-1">
+        <div className="img" />
         <div className="content">
           <h3>Accelerate Business Growth To Improve Revenue Numbers</h3>
           <div className="dropdown-container">
             {[1, 2, 3].map((point) => (
-              <div
-                key={point}
-                className={`dropdown ${activePoint === point ? "active" : ""}`}
-              >
+              <div key={point} className={`dropdown ${activePoint === point ? "active" : ""}`}>
                 <h4
                   onClick={() => handlePointClick(point)}
-                  style={{
-                    color: activePoint === point ? "#14BF98" : "inherit",
-                  }}
+                  style={{ color: activePoint === point ? "#14BF98" : "inherit" }}
                 >
-                  <span
-                    className={`numbering ${
-                      activePoint === point ? "active" : ""
-                    }`}
-                  >
+                  <span className={`numbering ${activePoint === point ? "active" : ""}`}>
                     {point}
                   </span>
                   {point === 1
                     ? "How Can Aria Help Your Business"
                     : point === 2
-                    ? "Great Strategic Business Planning"
-                    : "Online Marketing Campaign"}
+                      ? "Great Strategic Business Planning"
+                      : "Online Marketing Campaign"}
                 </h4>
                 {activePoint === point && (
                   <p>
                     {point === 1
-                      ? "At Aria solutions we've taken the consultancy concept one step further by offering a full service management organization with expertise."
+                      ? "At Aria solutions, we've taken the consultancy concept one step further by offering a full-service management organization with expertise."
                       : point === 2
-                      ? "Aria partners with businesses to business growth and development ideas including environment analysis, plan execution and evaluation."
-                      : "An awesome online marketing plan won't save your bad product but paired with a good product, the sky is the limit for what can be achieved."}
+                        ? "Aria partners with businesses to promote growth and development ideas, including environment analysis, plan execution, and evaluation."
+                        : "A strong online marketing plan paired with a great product can achieve amazing results."}
                   </p>
                 )}
               </div>
@@ -163,62 +169,72 @@ const Services = () => {
         </div>
       </div>
 
-      <div className='propositions propositions-2'>
-        <div className='content'>
-          <div className='category-list-container'>
-            <div className='category-item active'>
-              <h3><span><Grid3X3/></span>Business</h3>
+      <div className="propositions propositions-2">
+        <div className="content">
+          <div className="category-list-container">
+            <div className="category-item active">
+              <h3><span><Grid3X3/></span> Business</h3>
             </div>
-            <div className='category-item'>
-              <h3><span><Grid3X3/></span>Expertise</h3>
+            <div className="category-item">
+              <h3><span><Grid3X3 /></span> Expertise</h3>
             </div>
-            <div className='category-item'>
-              <h3><span><Grid3X3/></span>Quality</h3>
+            <div className="category-item">
+              <h3><span><Grid3X3 /></span> Quality</h3>
             </div>
           </div>
-          <br />
           <h3>Business Services For Companies</h3>
-          <br />
           <p>
-            Aria provides the most innovative and customized business services in the industry. Our <span className='green-text underline'>Services</span>
-            section shows how flexible we are for all types of budgets.
+            Aria provides innovative and customized business services. Our <span href="#">Services</span> section showcases our flexibility for all budgets.
           </p>
-          <div className='skill-list-container'>
-            <div className='skill-item'>
+          <div className="skill-list-container">
+            <div className="skill-item">
               <h6>Business Development 100%</h6>
-              <div className='progress-bar-p-100'><RectangleHorizontal color="#14bf98" /></div>
+              <div className="progress-bar-p-100"><RectangleHorizontal color="#14bf98" /></div>
             </div>
-            <div className='skill-item'>
+            <div className="skill-item">
               <h6>Opportunity Spotting 76%</h6>
-              <div className='progress-bar-p-76'><RectangleHorizontal color="#14bf98" /></div>
+              <div className="progress-bar-p-76"><RectangleHorizontal color="#14bf98" /></div>
             </div>
-            <div className='skill-item'>
+            <div className="skill-item">
               <h6>Online Marketing 90%</h6>
-              <div className='progress-bar-p-90'><RectangleHorizontal color="#14bf98" /></div>
+              <div className="progress-bar-p-90"><RectangleHorizontal color="#14bf98" /></div>
             </div>
           </div>
         </div>
-        <div className='img'/>
-        {/* <img src='./assets/Forest.jpg' alt='Forest' loading="lazy" /> */}
+        <div className="img" />
       </div>
-      <div className='testimonials'>
+
+      {/* Testimonials Section */}
+      <div className="testimonials-section">
+      <div className="testimonials">
         <h3>Read Our Customer Testimonials</h3>
-        <br />
-        <p>
-          Our clients are our partners and we can not imagine a better future for our
-          <br />
-          company without helping them reach their objectives
-          <br />
-        </p>
+        <p>Our clients are our partners, and we aim to help them reach their objectives.</p>
       </div>
-    <div className="testimonial-list-container">
-      <ChevronLeft onClick={handlePrevClick} />
-      <div className="testimonial-item">
-        <img src={testimonialData[currentIndex].image} alt={testimonialData[currentIndex].name} loading="lazy" />
-        <p className="italic">{testimonialData[currentIndex].text}</p>
-        <h4>{testimonialData[currentIndex].name}</h4>
+
+      <div className="testimonial-carousel">
+        <button 
+          className="carousel-arrow left" 
+          onClick={handlePrevClick}
+          aria-label="Previous testimonial"
+        >
+          <ChevronLeft size={30} />
+        </button>
+        <div className="testimonial-list-container">
+          <div 
+            className="testimonial-wrapper"
+            ref={scrollContainerRef}
+          >
+            {renderVisibleTestimonials()}
+          </div>
+        </div>
+        <button 
+          className="carousel-arrow right" 
+          onClick={handleNextClick}
+          aria-label="Next testimonial"
+        >
+          <ChevronRight size={30} />
+        </button>
       </div>
-      <ChevronRight onClick={handleNextClick} />
     </div>
     </div>
   );
