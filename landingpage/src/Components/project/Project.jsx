@@ -22,7 +22,6 @@ const Project = () => (
       <h2>Projects That We're Proud Of</h2>
       <br />
       
-      {/* Categories section */}
       <div className="category-list-container">
         <ul>
           <li>
@@ -43,9 +42,9 @@ const Project = () => (
         </ul>
       </div>
       
-      {/* Projects list */}
       <div className="projectListContainer">
         {projects.map((project, index) => (
+          <div className='squareContainer'>
           <div className="projectItemContainer" key={index}>
             <img
               className="projectImage"
@@ -53,6 +52,7 @@ const Project = () => (
               alt={project.title}
             />
             <div className="projectTitle">{project.title}</div>
+          </div>
           </div>
         ))}
       </div>

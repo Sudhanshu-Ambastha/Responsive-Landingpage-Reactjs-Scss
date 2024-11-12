@@ -79,6 +79,9 @@ h2 {
   gap: 0;
 }
 
+.squareContainer {
+  clip-path: inset(0 0 0 0);
+}
 .projectItemContainer {
   position: relative;
   overflow: hidden;
@@ -113,6 +116,8 @@ h2 {
     text-align: center;
     background: rgba(0, 0, 0, 0.7);
     color: white;
+    font-weight: bolder;
+    font-size: 1.2rem;
     opacity: 0;
     transition: opacity 0.3s ease;
   }
