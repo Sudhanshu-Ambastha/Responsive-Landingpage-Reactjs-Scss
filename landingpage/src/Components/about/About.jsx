@@ -1,9 +1,9 @@
 import React from "react";
-import "./calls.scss";
+import "./about.scss";
 
 const About = () => (
   <div>
-     <img src="./assets/Glacier.jpg" alt="Mountain" loading="lazy"/>
+     <img src="../../assets/Mountain.jpg" alt="Mountain" loading="lazy"/>
         <div class="content">
           <span class="section-title">ABOUT</span>
           <h3>We're Passionate about Delivering Growth Services</h3>
