@@ -37,7 +37,7 @@ h2 {
     line-height: 2.125rem;
     family: "Montserrat", sans-serif;
   }
-  color: $dark-gray-color;
+  color: $white;
 }
 
 .category-list-container {
@@ -60,7 +60,7 @@ h2 {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     background-color: $disabled-color;
-    color: var(--dark-gray-color);
+    color: $dark-gray-color;
     border: none;
     cursor: pointer;
     font-size: 0.875rem;
@@ -68,7 +68,7 @@ h2 {
 
     &.active {
       background-color: $light-green-color;
-      color: var(--white);
+      color: $white;
     }
   }
 }
