@@ -50,7 +50,7 @@ const Navbar = () => {
           <p><a href="#services" onClick={() => handleMenuClick('services')} className={activeSection === 'services' ? 'active' : ''}>Services</a></p>
           <p><a href="#calls" onClick={() => handleMenuClick('calls')} className={activeSection === 'calls' ? 'active' : ''}>Call Me</a></p>
           <p><a href="#project" onClick={() => handleMenuClick('project')} className={activeSection === 'project' ? 'active' : ''}>Project</a></p>
-          <p><a href="#about" onClick={() => handleMenuClick('about')} className={activeSection === 'about' ? 'active' : ''}>About</a></p>
+          <p><a href="#about" onClick={() => handleMenuClick('about')} className={activeSection === 'about' ? 'active' : ''}>About&#9660;</a></p>
           <p><a href="#contact" onClick={() => handleMenuClick('contact')} className={activeSection === 'contact' ? 'active' : ''}>Contact</a></p>
         </div>
       </div>
@@ -74,7 +74,7 @@ const Navbar = () => {
             <p><a href="#services" onClick={() => handleMenuClick('services')} className={activeSection === 'services' ? 'active' : ''}>Services</a></p>
             <p><a href="#calls" onClick={() => handleMenuClick('calls')} className={activeSection === 'calls' ? 'active' : ''}>Call Me</a></p>
             <p><a href="#project" onClick={() => handleMenuClick('project')} className={activeSection === 'project' ? 'active' : ''}>Project</a></p>
-            <p><a href="#about" onClick={() => handleMenuClick('about')} className={activeSection === 'about' ? 'active' : ''}>About</a></p>
+            <p><a href="#about" onClick={() => handleMenuClick('about')} className={activeSection === 'about' ? 'active' : ''}>About&#9660;</a></p>
             <p><a href="#contact" onClick={() => handleMenuClick('contact')} className={activeSection === 'contact' ? 'active' : ''}>Contact</a></p>
           </div>
         </div>

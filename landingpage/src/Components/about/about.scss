@@ -1,3 +1,5 @@
+@import "../../variables.module.scss";
+
 .about-container {
   display: flex;
   align-items: center;
@@ -6,30 +8,34 @@
 
   .Mountain {
     width: 50%;
-    height: auto;
+    height: 350px;
     border-radius: 8px;
+    margin-left: 5rem;
+    margin-top: 2rem;
   }
 
   .content {
     width: 50%;
+    margin-left: 3rem;
 
     .section-title {
-      color: #00bfa6;
+      color: $light-green-color;
       font-weight: bold;
       font-size: 1rem;
       text-transform: uppercase;
       margin-bottom: 0.5rem;
+      text-align: left;
     }
 
     h3 {
       font-size: 2rem;
-      color: #333;
+      color: $dark-gray-color;
       font-weight: bold;
       margin-bottom: 1rem;
     }
 
     p {
-      color: #666;
+      color: $light-gray-color;
       font-size: 1rem;
       line-height: 1.6;
       margin-bottom: 2rem;
@@ -47,7 +53,7 @@
 
         &::before {
           content: "■";
-          color: #00bfa6;
+          color: $light-green-color;
           position: absolute;
           margin-top: -8px;
           left: 0;
@@ -67,13 +73,13 @@
         .number {
           font-size: 2rem;
           font-weight: bold;
-          color: #00bfa6;
+          color: $light-green-color;
           margin: 0;
         }
 
         p {
           font-size: 1rem;
-          color: #333;
+          color: $light-gray-color;
           margin: 0;
         }
       }

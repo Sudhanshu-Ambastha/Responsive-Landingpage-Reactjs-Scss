@@ -1,3 +1,5 @@
+@import "../../variables.module.scss";
+
 .lp__navbar {
   position: fixed;
   top: 0;
@@ -18,11 +20,11 @@
   &.calls,
   &.project,
   &.contact {
-    background-color: var(--green-bg-color);
+    background-color: $form-input-bg-color;
   }
 
   &.scrolling {
-    background-color: var(--green-bg-color);
+    background-color: $form-input-bg-color;
     padding: 0.75rem 1.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
@@ -32,7 +34,7 @@
     flex: 1;
     align-items: center;
     justify-content: space-between;
-    color: var(--white);
+    color: $white;
 
     &_logo {
       margin-right: 2rem;
@@ -62,7 +64,7 @@
       }
 
       a {
-        color: #fff;
+        color: $white;
         font-family: var(--font-family);
         font-weight: 500;
         font-size: 1rem;
@@ -72,7 +74,7 @@
 
         &:hover,
         &.active {
-          color: var(--light-green-color);
+          color: $light-green-color;
         }
       }
     }
@@ -89,7 +91,7 @@
     &_container {
       display: flex;
       flex-direction: column;
-      background: var(--color-footer);
+      background: $dark-green-color;
       padding: 1.5rem;
       position: absolute;
       right: 1rem;
@@ -106,10 +108,10 @@
       }
 
       a {
-        color: #fff;
+        color: $white;
         &:hover,
         &.active {
-          color: var(--light-green-color);
+          color: $light-green-color;
         }
       }
     }
@@ -137,8 +139,8 @@
     width: 2rem;
     height: 2rem;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    background-color: var(--light-green-color);
-    color: var(--white);
+    background-color: $light-green-color;
+    color: $white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,8 +148,8 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 
     &:hover {
-      background-color: var(--white);
-      color: var(--light-green-color);
+      background-color: $white;
+      color: $light-green-color;
     }
   }
 }

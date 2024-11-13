@@ -1,3 +1,5 @@
+@import "../../variables.module.scss";
+
 body,
 html {
   margin: 0;
@@ -9,8 +11,8 @@ html {
   display: flex;
   justify-content: space-between;
   padding: 1.5rem 1rem;
-  background-color: var(--green-bg-color);
-  color: var(--white);
+  background-color: $dark-green-color;
+  color: $white;
   height: 100vh;
   font: 400 1.5rem "Open Sans", sans-serif;
   gap: 1rem;
@@ -31,7 +33,11 @@ html {
     padding-left: 5rem;
     padding-right: 1rem;
 
-    h2,
+    h2 {
+      color: $white;
+      margin: 0 0 10px;
+    }
+
     p,
     ul {
       margin: 0 0 10px;
@@ -48,12 +54,12 @@ html {
 
       li {
         margin-bottom: 5px;
-        color: var(--white);
+        color: $white;
         gap: 1rem;
 
         span {
           font-size: 20px;
-          color: var(--light-green-color);
+          color: $light-green-color;
           margin-right: 10px;
         }
       }
@@ -79,33 +85,33 @@ html {
       border-radius: 5px;
       width: 100%;
       cursor: text;
-      color: var(--white);
+      color: $white;
     }
 
     #name,
     #phone,
     #email {
-      color: var(--white);
+      color: $white;
     }
 
     input[type="text"],
     input[type="email"],
     select {
-      border: 1px solid var(--form-input-border-color);
-      background-color: var(--form-input-bg-color);
-      color: var(--white);
+      border: 1px solid $form-input-border-color;
+      background-color: $form-input-bg-color;
+      color: $white;
     }
 
     button {
-      background-color: var(--light-green-color);
-      color: var(--white);
+      background-color: $light-green-color;
+      color: $white;
       cursor: pointer;
       width: 100%;
 
       &:hover {
         background-color: transparent;
-        color: var(--light-green-color);
-        border: 1px solid var(--light-green-color);
+        color: $light-green-color;
+        border: 1px solid $light-green-color;
       }
     }
   }
@@ -134,11 +140,11 @@ html {
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: var(--white);
+    background-color: $white;
   }
 
   input:checked ~ .checkmark {
-    background-color: var(--dark-gray-color);
+    background-color: $dark-gray-color;
   }
 
   .checkmark:after {
@@ -156,7 +162,7 @@ html {
     top: 5px;
     width: 5px;
     height: 10px;
-    border: solid var(--white);
+    border: solid $white;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
   }
