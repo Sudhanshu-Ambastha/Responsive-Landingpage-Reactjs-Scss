@@ -1,0 +1,82 @@
+.about-container {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+
+  .Mountain {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .content {
+    width: 50%;
+
+    .section-title {
+      color: #00bfa6;
+      font-weight: bold;
+      font-size: 1rem;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+      color: #333;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: #666;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    ul {
+      padding: 0;
+      margin: 1rem 0;
+
+      li {
+        position: relative;
+        margin-bottom: 0.5rem;
+        padding-left: 1.5rem;
+        list-style: none;
+
+        &::before {
+          content: "■";
+          color: #00bfa6;
+          position: absolute;
+          margin-top: -8px;
+          left: 0;
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .stats-list-container {
+      display: flex;
+      gap: 2rem;
+      margin-top: 1.5rem;
+
+      .stat-items {
+        text-align: center;
+
+        .number {
+          font-size: 2rem;
+          font-weight: bold;
+          color: #00bfa6;
+          margin: 0;
+        }
+
+        p {
+          font-size: 1rem;
+          color: #333;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
