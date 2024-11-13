@@ -1,3 +1,5 @@
+@import "../../variables.module.scss";
+
 body,
 html {
   margin: 0;
@@ -10,7 +12,7 @@ html {
   justify-content: space-between;
   padding: 20px 20px 100px 20px;
   background-color: transparent;
-  color: var(--dark-gray-color);
+  color: $dark-gray-color;
   height: 100vh;
   font: 400 1rem / 1.5rem "Open Sans", sans-serif;
 
@@ -29,7 +31,7 @@ html {
     display: block;
     font-size: 0.8125rem;
     font-weight: bold;
-    color: var(--light-green-color);
+    color: $light-green-color;
     margin-bottom: 20px;
     text-transform: uppercase;
     text-align: left;
@@ -59,10 +61,10 @@ html {
 
       li {
         margin-bottom: 5px;
-        color: var(--light-gray-color);
+        color: $light-gray-color;
 
         span {
-          color: var(--light-green-color);
+          color: $light-green-color;
           margin-left: 10px;
         }
       }
@@ -88,16 +90,16 @@ html {
           25% 100%,
           0% 50%
         );
-        background-color: var(--light-green-color);
-        color: var(--white);
+        background-color: $light-green-color;
+        color: $white;
         margin: 0 5px;
         cursor: pointer;
         font-size: 1.5rem;
         line-height: 1rem;
 
         &:hover {
-          background-color: var(--white);
-          color: var(--light-green-color);
+          background-color: $white;
+          color: $light-green-color;
         }
 
         i {
@@ -122,7 +124,7 @@ html {
       border: none;
       border-radius: 5px;
       width: 100%;
-      border: 1px solid var(--dark-gray-color);
+      border: 1px solid $dark-gray-color;
     }
 
     input[type="message"] {
@@ -132,7 +134,7 @@ html {
       border-radius: 5px;
       width: 100%;
       height: 10rem;
-      border: 1px solid var(--dark-gray-color);
+      border: 1px solid $dark-gray-color;
     }
 
     .checkbox-container {
@@ -158,7 +160,7 @@ html {
         left: 0;
         height: 25px;
         width: 25px;
-        border: 1px solid var(--dark-gray-color);
+        border: 1px solid $dark-gray-color;
         border-radius: 5px;
 
         &:after {
@@ -169,7 +171,7 @@ html {
       }
 
       input:checked ~ .checkmark {
-        background-color: var(--dark-gray-color);
+        background-color: $dark-gray-color;
 
         &:after {
           display: block;
@@ -177,7 +179,7 @@ html {
           top: 5px;
           width: 5px;
           height: 10px;
-          border: solid var(--white);
+          border: solid $white;
           border-width: 0 3px 3px 0;
           transform: rotate(45deg);
         }

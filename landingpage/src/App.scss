@@ -1,22 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
-@import "variables.module.scss";
+@import "./variables.module.scss";
 
-:root {
-  --bg-color: #{$bg-color};
-  --green-bg-color: #{$green-bg-color};
-  --dark-green-color: #{$dark-green-color};
-  --light-green-color: #{$light-green-color};
-  --dark-gray-color: #{$dark-gray-color};
-  --light-gray-color: #{$light-gray-color};
-  --light-grey-border-color: #{$light-grey-border-color};
-  --white: #{$white};
-  --disabled-color: #{$disabled-color};
-  --dark-white-color: #{$dark-white-color};
-  --form-input-bg-color: #{$form-input-bg-color};
-  --form-input-border-color: #{$form-input-border-color};
-  --image-contrast: #{$image-contrast};
-  --image-greyscale: #{$image-greyscale};
-}
+// :root {
+//   --bg-color: #{$bg-color};
+//   --green-bg-color: #{$green-bg-color};
+//   --dark-green-color: #{$dark-green-color};
+//   --light-green-color: #{$light-green-color};
+//   --dark-gray-color: #{$dark-gray-color};
+//   --light-gray-color: #{$light-gray-color};
+//   --light-grey-border-color: #{$light-grey-border-color};
+//   --white: #{$white};
+//   --disabled-color: #{$disabled-color};
+//   --dark-white-color: #{$dark-white-color};
+//   --form-input-bg-color: #{$form-input-bg-color};
+//   --form-input-border-color: #{$form-input-border-color};
+//   --image-contrast: #{$image-contrast};
+//   --image-greyscale: #{$image-greyscale};
+// }
 
 * {
   box-sizing: border-box;
@@ -26,7 +26,7 @@
 }
 
 body {
-  background: #{$white};
+  background: $white;
 }
 
 a {
@@ -36,9 +36,9 @@ a {
 
 button {
   cursor: pointer;
-  border: 1px solid #{$light-green-color};
-  background-color: #{$light-green-color};
-  color: #{$white};
+  border: 1px solid $light-green-color;
+  background-color: $light-green-color;
+  color: $white;
   text-transform: uppercase;
   padding: 1rem 2rem;
   border-radius: 5px;
@@ -104,9 +104,6 @@ button {
 
 @media screen and (max-width: 800px) and (orientation: landscape),
   screen and (max-height: 300px) {
-  /**
-   * Remove all paddings around the image on small screen
-   */
   .mfp-img-mobile {
     .mfp-image-holder {
       padding-left: 0;

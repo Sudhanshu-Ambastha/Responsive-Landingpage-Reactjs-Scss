@@ -79,7 +79,7 @@
   h6 {
     font-size: 1rem;
     font-weight: bold;
-    color: #333;
+    color: $dark-gray-color;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -102,7 +102,7 @@
     border: none;
     border-radius: 5px;
     background-color: $light-green-color;
-    color: #fff;
+    color: $white;
     cursor: pointer;
     transition: background-color 0.3s ease;
 

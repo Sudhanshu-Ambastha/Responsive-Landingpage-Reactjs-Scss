@@ -3,7 +3,7 @@
 This project is a responsive landing page built using React.js. It is based on a design available on [Free CSS](https://www.free-css.com/assets/files/free-css-templates/preview/page259/aria/). The landing page features a header, main content section, and a footer. The main content section includes various sections such as About, Links, Tools, and Partners.
 
 ## Preview
-<picture><img src = "landingpage/src/assets/trial.gif" width = 100%></picture>
+<picture><img src = "landingpage/src/assets/Preview.gif" width = 100%></picture>
 
 ## Certificate
 
@@ -16,7 +16,7 @@ To run this project locally, follow these steps:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/Responsive-Landingpage-Reactjs.git
+   git clone https://github.com/Sudhanshu-Ambastha/Responsive-Landingpage-Reactjs-Scss.git
    ```
 
 2. Navigate to the project directory:
@@ -33,6 +33,10 @@ To run this project locally, follow these steps:
    ```
    ```
    npm install lucide-react && npm install react-icons
+
+   ```
+   ```
+   npm install react-router-dom && npm install react-scroll
 
    ```
 4. Start the development server:

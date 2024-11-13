@@ -1,6 +1,7 @@
-/* footer.scss */
+@import "../../variables.module.scss";
+
 .footer {
-  background-color: var(--dark-green-color);
+  background-color: $dark-green-color;
   padding: 60px 0;
 
   .text-container {
@@ -8,11 +9,11 @@
   }
 
   h4 {
-    color: #fff;
+    color: $white;
   }
 
   .white {
-    color: #fff;
+    color: $white;
   }
 
   ul {
@@ -21,7 +22,7 @@
       margin-bottom: 15px;
 
       a {
-        color: #fff;
+        color: $white;
 
         &:hover {
           text-decoration: underline;
@@ -69,17 +70,17 @@
 
   h4 {
     font-size: 16px;
-    color: #fff;
+    color: $white;
     margin-bottom: 25px;
   }
 
   p {
-    color: #bbb;
+    color: $dark-white-color;
     font-size: 15px;
   }
 
   a {
-    color: #bbb;
+    color: $dark-white-color;
     text-decoration: none;
 
     &:hover {
@@ -106,18 +107,18 @@
 
       h4 {
         font-size: 16px;
-        color: #fff;
+        color: $white;
         margin-bottom: 15px;
       }
 
       p {
-        color: #bbb;
+        color: $dark-white-color;
         margin-bottom: 10px;
       }
     }
   }
 
   .lp__footer-copyright p {
-    color: #bbb;
+    color: $dark-white-color;
   }
 }

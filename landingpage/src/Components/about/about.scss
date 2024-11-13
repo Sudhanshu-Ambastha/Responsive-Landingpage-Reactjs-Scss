@@ -1,0 +1,88 @@
+@import "../../variables.module.scss";
+
+.about-container {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+
+  .Mountain {
+    width: 50%;
+    height: 350px;
+    border-radius: 8px;
+    margin-left: 5rem;
+    margin-top: 2rem;
+  }
+
+  .content {
+    width: 50%;
+    margin-left: 3rem;
+
+    .section-title {
+      color: $light-green-color;
+      font-weight: bold;
+      font-size: 1rem;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      text-align: left;
+    }
+
+    h3 {
+      font-size: 2rem;
+      color: $dark-gray-color;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: $light-gray-color;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    ul {
+      padding: 0;
+      margin: 1rem 0;
+
+      li {
+        position: relative;
+        margin-bottom: 0.5rem;
+        padding-left: 1.5rem;
+        list-style: none;
+
+        &::before {
+          content: "■";
+          color: $light-green-color;
+          position: absolute;
+          margin-top: -8px;
+          left: 0;
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .stats-list-container {
+      display: flex;
+      gap: 2rem;
+      margin-top: 1.5rem;
+
+      .stat-items {
+        text-align: center;
+
+        .number {
+          font-size: 2rem;
+          font-weight: bold;
+          color: $light-green-color;
+          margin: 0;
+        }
+
+        p {
+          font-size: 1rem;
+          color: $light-gray-color;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

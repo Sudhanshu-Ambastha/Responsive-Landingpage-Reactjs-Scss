@@ -1,6 +1,8 @@
+@import "../../variables.module.scss";
+
 .lp__navbar {
   position: fixed;
-  top: -15px;
+  top: 0;
   right: 0;
   left: 0;
   width: 100%;
@@ -8,31 +10,38 @@
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
-  transition: background-color all 0.2s;
+  transition: background-color 0.2s ease;
   z-index: 2;
+  padding: 1rem 2rem;
+
+  &.home,
+  &.intro,
+  &.services,
+  &.calls,
+  &.project,
+  &.contact {
+    background-color: $form-input-bg-color;
+  }
 
   &.scrolling {
-    padding: 1rem 1.5rem 1px 2rem;
-    max-height: 5rem;
-    background-color: var(--green-bg-color);
-    z-index: 2;
+    background-color: $form-input-bg-color;
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   &-links {
-    flex: 1;
     display: flex;
-    justify-content: flex-end;
+    flex: 1;
     align-items: center;
     justify-content: space-between;
-    padding: 2.125rem 1.5rem 2.125rem 2rem;
-    top: 0;
+    color: $white;
 
     &_logo {
       margin-right: 2rem;
 
       img {
-        width: 5rem;
-        height: 5rem;
+        width: 4rem;
+        height: 4rem;
         clip-path: polygon(
           51% 19%,
           77% 34%,
@@ -41,46 +50,37 @@
           23% 65%,
           23% 34%
         );
-        justify-content: flex-start;
+        cursor: pointer;
       }
     }
 
     &_container {
       display: flex;
-      flex-direction: row;
-      gap: 1rem;
+      gap: 1.5rem;
 
-      ul {
-        list-style: none;
+      p {
         margin: 0;
         padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-      }
-
-      li {
-        margin-right: 2rem;
       }
 
       a {
-        color: #fff;
+        color: $white;
         font-family: var(--font-family);
         font-weight: 500;
-        font-size: 18px;
-        line-height: 25px;
+        font-size: 1rem;
         text-transform: capitalize;
         cursor: pointer;
+        transition: color 0.3s;
 
         &:hover,
         &.active {
-          color: var(--light-green-color);
+          color: $light-green-color;
         }
       }
     }
   }
 
   &-menu {
-    margin-left: 1rem;
     display: none;
     position: relative;
 
@@ -90,70 +90,66 @@
 
     &_container {
       display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
       flex-direction: column;
-      text-align: end;
-      background: var(--color-footer);
-      padding: 2rem;
+      background: $dark-green-color;
+      padding: 1.5rem;
       position: absolute;
-      right: 0;
-      top: 40px;
-      margin-top: 1rem;
-      min-width: 210px;
-      border-radius: 5px;
-      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+      right: 1rem;
+      top: 3.5rem;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      min-width: 200px;
+      z-index: 3;
+      text-align: right;
 
       p {
         margin: 1rem 0;
+        font-size: 1rem;
       }
 
-      &-links-sign {
-        display: none;
+      a {
+        color: $white;
+        &:hover,
+        &.active {
+          color: $light-green-color;
+        }
       }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &-links_container {
+      display: none;
+    }
+
+    &-menu {
+      display: block;
     }
   }
 }
 
 .lp__icon {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   list-style: none;
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  li {
-    margin-right: 1rem;
-  }
-
-  a {
-    color: #fff;
-    font-size: 20px;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-  }
+  gap: 1rem;
+  padding-left: 10px;
 
   .icon {
     width: 2rem;
     height: 2rem;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    background-color: var(--light-green-color);
-    color: var(--white);
-    padding: 0.52rem;
-    align-content: center;
+    background-color: $light-green-color;
+    color: $white;
+    display: flex;
+    align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 
     &:hover {
-      background-color: var(--white);
-      color: var(--light-green-color);
+      background-color: $white;
+      color: $light-green-color;
     }
   }
 }

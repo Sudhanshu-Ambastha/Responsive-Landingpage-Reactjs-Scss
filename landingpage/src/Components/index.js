@@ -5,4 +5,5 @@ export { default as Services } from './services/Services';
 export { default as Calls } from './calls/Calls';
 export { default as Contact } from './contact/Contact';
 export { default as Project } from './project/Project';
+export { default as About } from './about/About';
 export { default as Footer } from './footer/Footer';

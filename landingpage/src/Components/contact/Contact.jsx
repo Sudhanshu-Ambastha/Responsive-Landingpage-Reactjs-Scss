@@ -62,7 +62,7 @@ const Contact = () => (
             <span className="checkmark"></span>I agree with Aria's stated
             Privacy Policy and Terms & Conditions
           </label>
-          <button>CALL ME</button>
+          <button>SUBMIT MESSAGE</button>
         </form>
       </div>
     </div>
