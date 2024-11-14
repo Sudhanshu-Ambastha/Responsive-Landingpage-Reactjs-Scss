@@ -138,7 +138,7 @@ const Services = () => {
               <div key={point} className={`dropdown ${activePoint === point ? "active" : ""}`}>
                 <h4
                   onClick={() => handlePointClick(point)}
-                  style={{ color: activePoint === point ? "#14BF98" : "inherit" }}
+                  className={activePoint === point ? "active" : ""}
                 >
                   <span className={`numbering ${activePoint === point ? "active" : ""}`}>
                     {point}
@@ -149,15 +149,13 @@ const Services = () => {
                       ? "Great Strategic Business Planning"
                       : "Online Marketing Campaign"}
                 </h4>
-                {activePoint === point && (
-                  <p>
-                    {point === 1
-                      ? "At Aria solutions, we've taken the consultancy concept one step further by offering a full-service management organization with expertise."
-                      : point === 2
-                        ? "Aria partners with businesses to promote growth and development ideas, including environment analysis, plan execution, and evaluation."
-                        : "A strong online marketing plan paired with a great product can achieve amazing results."}
-                  </p>
-                )}
+                <p className={activePoint === point ? "active" : ""}>
+                  {point === 1
+                    ? "At Aria solutions, we've taken the consultancy concept one step further by offering a full-service management organization with expertise."
+                    : point === 2
+                      ? "Aria partners with businesses to promote growth and development ideas, including environment analysis, plan execution, and evaluation."
+                      : "A strong online marketing plan paired with a great product can achieve amazing results."}
+                </p>
               </div>
             ))}
           </div>
