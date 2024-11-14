@@ -17,6 +17,10 @@ html {
   font: 400 1.5rem "Open Sans", sans-serif;
   gap: 1rem;
 
+  .section-title {
+    text-align: flex-start;
+  }
+
   .calls-form,
   .calls-info {
     display: flex;
@@ -30,18 +34,18 @@ html {
 
   .calls-info {
     margin-top: -3rem;
-    padding-left: 5rem;
-    padding-right: 1rem;
+    padding: 0 1rem 0 5rem;
 
     h2 {
       color: $white;
-      margin: 0 0 10px;
+      margin: 0 0 10px -10px;
       text-align: left;
     }
 
     p {
-      font-size: 20.5px;
+      font-size: 17px;
       margin: 0 0 10px;
+      color: $dark-white-color;
     }
 
     ul {
@@ -53,8 +57,9 @@ html {
       li {
         position: relative;
         margin-bottom: 5px;
-        color: $white;
+        color: $dark-white-color;
         padding-left: 2rem;
+        font-size: 17px;
 
         &::before {
           content: "■";
@@ -69,8 +74,7 @@ html {
   }
 
   .calls-form {
-    padding-left: 1rem;
-    padding-right: 5rem;
+    padding: 0 5rem 0 1rem;
     box-sizing: border-box;
     position: relative;
     gap: 0.7rem;
