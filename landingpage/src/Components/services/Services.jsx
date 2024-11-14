@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './services.scss';
-import { Grid3X3, RectangleHorizontal, ChevronLeft, ChevronRight } from 'lucide-react';
+import { RectangleHorizontal, ChevronLeft, ChevronRight } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTh, faTableCells } from '@fortawesome/free-solid-svg-icons';
 import testimonialsData from './testimonials.json';
 
 const Services = () => {
@@ -90,8 +92,8 @@ const Services = () => {
             Perfect for fresh ideas or young startups, this package will help get your business off the ground.
           </p>
           <ul>
-            <li><span>🟩</span> Environment and competition</li>
-            <li><span>🟩</span> Design the marketing plan</li>
+            <li>Environment and competition</li>
+            <li>Design the marketing plan</li>
           </ul>
           <h6>Starting at <span className="price">$199</span></h6>
           <button>Details</button>
@@ -105,8 +107,8 @@ const Services = () => {
             Use this service pack to give your company the necessary impulse to become an industry leader.
           </p>
           <ul>
-            <li><span>🟩</span> Business strategy planning</li>
-            <li><span>🟩</span> Taking the planned actions</li>
+            <li>Business strategy planning</li>
+            <li>Taking the planned actions</li>
           </ul>
           <h6>Starting at <span className="price">$299</span></h6>
           <button>Details</button>
@@ -120,8 +122,8 @@ const Services = () => {
             You already are a reference point in your industry; now you need to learn about acquisitions.
           </p>
           <ul>
-            <li><span>🟩</span> Maintaining the leader status</li>
-            <li><span>🟩</span> Acquisitions the right way</li>
+            <li>Maintaining the leader status</li>
+            <li>Acquisitions the right way</li>
           </ul>
           <h6>Starting at <span className="price">$399</span></h6>
           <button>Details</button>
@@ -166,13 +168,13 @@ const Services = () => {
         <div className="content">
           <div className="category-list-container">
             <div className="category-item active">
-              <h3><span><Grid3X3/></span> Business</h3>
+              <h3><span><FontAwesomeIcon icon="fa-solid fa-grid" /></span> Business</h3>
             </div>
             <div className="category-item">
-              <h3><span><Grid3X3 /></span> Expertise</h3>
+              <h3><span><FontAwesomeIcon icon={faTableCells} /></span> Expertise</h3>
             </div>
             <div className="category-item">
-              <h3><span><Grid3X3 /></span> Quality</h3>
+              <h3><span><FontAwesomeIcon icon={faTh} /></span> Quality</h3>
             </div>
           </div>
           <h3>Business Services For Companies</h3>

@@ -36,31 +36,33 @@ html {
     h2 {
       color: $white;
       margin: 0 0 10px;
-    }
-
-    p,
-    ul {
-      margin: 0 0 10px;
+      text-align: left;
     }
 
     p {
       font-size: 20.5px;
+      margin: 0 0 10px;
     }
 
     ul {
       list-style-type: none;
       padding: 0;
       font-size: 20.5px;
+      margin: 0 0 10px;
 
       li {
+        position: relative;
         margin-bottom: 5px;
         color: $white;
-        gap: 1rem;
+        padding-left: 2rem;
 
-        span {
-          font-size: 20px;
+        &::before {
+          content: "■";
           color: $light-green-color;
-          margin-right: 10px;
+          font-size: 1rem;
+          position: absolute;
+          left: 0;
+          top: 0.2rem;
         }
       }
     }

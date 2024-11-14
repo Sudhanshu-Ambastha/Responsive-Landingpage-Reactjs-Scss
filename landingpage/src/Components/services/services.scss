@@ -67,10 +67,17 @@
       li {
         font-size: 14px;
         color: $dark-gray-color;
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 10px;
 
-        span {
-          font-size: 0.5rem;
-          margin-right: 0.625rem;
+        &::before {
+          content: "■";
+          color: $light-green-color;
+          position: absolute;
+          left: 0;
+          margin-top: -8px;
+          font-size: 1.5rem;
         }
       }
     }
