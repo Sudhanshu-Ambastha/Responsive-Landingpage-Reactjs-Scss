@@ -50,25 +50,25 @@ h2 {
     padding: 0;
     display: flex;
     align-items: center;
-  }
 
-  li {
-    margin-right: 1rem;
-  }
+    li {
+      margin-right: 1rem;
 
-  button {
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    background-color: $disabled-color;
-    color: $dark-gray-color;
-    border: none;
-    cursor: pointer;
-    font-size: 0.875rem;
-    transition: all 0.3s ease;
+      button {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        background-color: $disabled-color;
+        color: $dark-gray-color;
+        border: none;
+        cursor: pointer;
+        font-size: 0.875rem;
+        transition: all 0.3s ease;
 
-    &.active {
-      background-color: $light-green-color;
-      color: $white;
+        &.active {
+          background-color: $light-green-color;
+          color: $white;
+        }
+      }
     }
   }
 }
@@ -120,10 +120,10 @@ h2 {
     font-size: 1.2rem;
     opacity: 0;
     transition: opacity 0.3s ease;
-  }
 
-  &:hover .projectTitle {
-    opacity: 1;
+    &:hover .projectTitle {
+      opacity: 1;
+    }
   }
 }
 
