@@ -337,35 +337,80 @@
       font-weight: bold;
       color: $dark-gray-color;
       margin-bottom: 0.5rem;
+      &.hover,
+      &.active {
+        color: $light-green-color;
+      }
     }
-    &.hover,
-    &.active {
-      color: $light-green-color;
-    }
-    .skill-list-container .skill-item .progress-bar-p-100 {
-      width: 100%;
-      background: $light-green-color;
-      border-radius: 0.125rem;
-      display: block;
-      padding-left: 1.5rem;
-    }
+    .skill-list-container {
+      .underline {
+        color: $light-green-color;
+        text-decoration: underline;
+      }
+      .skill-item {
+        .progress-bar-p-100 {
+          width: 100%;
+          background: $light-green-color;
+          border-radius: 0.125rem;
+          display: block;
+          padding-left: 1.5rem;
+        }
 
-    .skill-list-container .skill-item .progress-bar-p-76 {
-      width: 76%;
-      background: $light-green-color;
-      border-radius: 0.125rem;
-      display: block;
-      padding-left: 1.5rem;
-    }
-    .skill-list-container .skill-item .progress-bar-p-90 {
-      width: 90%;
-      background: $light-green-color;
-      border-radius: 0.125rem;
-      display: block;
-      padding-left: 1.5rem;
+        .progress-bar-p-76 {
+          width: 76%;
+          background: $light-green-color;
+          border-radius: 0.125rem;
+          display: block;
+          padding-left: 1.5rem;
+        }
+        .progress-bar-p-90 {
+          width: 90%;
+          background: $light-green-color;
+          border-radius: 0.125rem;
+          display: block;
+          padding-left: 1.5rem;
+        }
+      }
+      .Grid,
+      .textarea {
+        .bold {
+          font-weight: 700;
+          color: $dark-gray-color;
+        }
+        .underline {
+          text-decoration: underline;
+          color: $light-green-color;
+        }
+      }
+      .textarea li {
+        list-style: none;
+        padding-left: 17px;
+        &::before {
+          content: "■";
+          color: $light-green-color;
+          position: absolute;
+          margin-top: -8px;
+          margin-left: 19px;
+          left: 0;
+          font-size: 1.5rem;
+        }
+      }
+      .Grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+        padding: 20px;
+        list-style: none;
+        li {
+          list-style: number;
+          word-wrap: break-word;
+        }
+      }
     }
   }
 }
+
 /* Testimonials Slider */
 .testimonials-section {
   text-align: center;
@@ -402,7 +447,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      z-index: 2;
+      z-index: 1;
       background: rgba(20, 191, 152, 0.1);
       border-radius: 50%;
       padding: 15px;

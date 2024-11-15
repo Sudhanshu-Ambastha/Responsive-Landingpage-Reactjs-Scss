@@ -1,14 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './services.scss';
-import { Grid3X3,RectangleHorizontal, ChevronLeft, ChevronRight } from 'lucide-react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTh, faTableCells } from '@fortawesome/free-solid-svg-icons';
+import { RectangleHorizontal, ChevronLeft, ChevronRight } from 'lucide-react';
 import testimonialsData from './testimonials.json';
 
 const Services = () => {
   const [testimonialData, setTestimonialData] = useState([]);
   const [activeCategory, setActiveCategory] = useState(1);
-  const [isGridView, setIsGridView] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activePoint, setActivePoint] = useState(1);
   const [enabledStates, setEnabledStates] = useState({
@@ -36,7 +33,7 @@ const Services = () => {
         return (
           <div className="skill-list-container">
           <h3>Business Services For Companies</h3>
-          <p>Aria provides the most innovative and customized business services in the industry. Our Services section shows how flexible we are for all types of budgets.</p>
+          <p>Aria provides the most innovative and customized business services in the industry. Our <span className='underline'>Services</span> section shows how flexible we are for all types of budgets.</p>
             <div className="skill-item">
               <h6>Business Development 100%</h6>
               <div className="progress-bar-p-100">
@@ -60,29 +57,28 @@ const Services = () => {
       case 2:
         return (
           <div className="skill-list-container">
-            <p id='Grid'>
-              1. <b>High quality</b> is on top of our list when it comes to the way we deliver the services<br/>
-              2. <b>Maximum impact</b> is what we look for in our actions<br/>
-              3. <b>Quality standards</b> are important but meant to be exceeded<br/>
-              4. <b>We're always looking</b> for industry leaders to help them win their market position<br/>
-              5. <b>Evaluation</b> is a key aspect of this business and important<br/>
-              6. <b>Ethic</b> procedures are always at the base of everything we do
-            </p>
-          </div>
+          <ul className="Grid">
+            <li><span className='bold'>High quality</span> is on top of our list when it comes to the way we deliver the services</li>
+            <li><span className='bold'>Maximum impact</span> is what we look for in our actions</li>
+            <li><span className='bold'>Quality standards</span> are important but meant to be exceeded</li>
+            <li><span className='bold'>We're always looking</span> for industry leaders to help them win their market position</li>
+            <li><span className='bold'>Evaluation</span> is a key aspect of this business and important</li>
+            <li><span className='bold'>Ethic</span> procedures are always at the base of everything we do</li>
+          </ul>
+        </div>
         );
       case 3:
         return (
           <div className="skill-list-container">
-            <p>
-              <b>We strive to achieve</b> 100% customer satisfaction for both<br/> types of customers: hiring companies and job seekers.<br/>
-              Types of customers <span className='underline'>with huge potential</span><br/><br/>
-              <b>Our goal is to help</b> your company achieve its full potential and establish long term stability for <span className='undeline'>the stakeholders</span><br/><br/>
-              • It's easy to get a quotation, just call our office anytime<br/>
-              • We'll get back to you with an initial estimate soon<br/>
-              • Get ready to see results even after only 30 days<br/>
-              • Ask for a quote and start improving your business<br/>
-              • Just fill out the form and we'll call you right away
-            </p>
+            <text className='textarea'>
+              <span className='bold'>We strive to achieve</span> 100% customer satisfaction for both types of customers:<br/> hiring companies and job seekers. Types of customers <span className='underline'>with huge potential</span><br/><br/>
+              <span className='bold'>Our goal is to help</span> your company achieve its full potential and establish long term<br/> stability for <span className='underline'>the stakeholders</span><br/><br/>
+              <li>It's easy to get a quotation, just call our office anytime</li>
+              <li>We'll get back to you with an initial estimate soon</li>               
+              <li>Get ready to see results even after only 30 days</li>
+              <li>Ask for a quote and start improving your business</li>
+              <li>Just fill out the form and we'll call you right away</li>
+            </text>
           </div>
         );
       default:
