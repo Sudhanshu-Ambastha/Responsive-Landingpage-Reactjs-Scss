@@ -241,17 +241,20 @@ const Services = () => {
                 className={`category-item ${activeCategory === category ? 'active' : ''}`}
                 onClick={() => handleCategoryClick(category)}
               >
-                <h3>
-                  <span
-                    onClick={() => handleCategoryClick(category)}
-                    style={{ cursor: 'pointer' }}
-                  >
+                <h3 style={{ 
+                  color: activeCategory === category ? '#14bf98' : '#c1cace',
+                  cursor: 'pointer'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.color = '#14bf98'}
+                onMouseLeave={(e) => e.currentTarget.style.color = activeCategory === category ? '#14bf98' : '#c1cace'}
+                >
+                  <span>
                     <svg
                       width="20px"
                       height="20px"
                       viewBox="0 0 17 17"
                       xmlns="http://www.w3.org/2000/svg"
-                      fill={activeCategory === category ? '#14bf98' : '#c1cace'}
+                      fill="currentColor"
                     >
                       <path d="M0 0h5v5h-5v-5zM6 5h5v-5h-5v5zM12 0v5h5v-5h-5zM0 11h5v-5h-5v5zM6 11h5v-5h-5v5zM12 11h5v-5h-5v5zM0 17h5v-5h-5v5zM6 17h5v-5h-5v5zM12 17h5v-5h-5v5z" />
                     </svg>

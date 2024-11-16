@@ -91,6 +91,10 @@ h2 {
 
   &:hover {
     transform: scale(1.05);
+
+    .projectTitle {
+      opacity: 1;
+    }
   }
 
   .projectImage {
@@ -120,13 +124,8 @@ h2 {
     font-size: 1.2rem;
     opacity: 0;
     transition: opacity 0.3s ease;
-
-    &:hover .projectTitle {
-      opacity: 1;
-    }
   }
 }
-
 .team {
   padding: 4rem 2rem;
   text-align: center;

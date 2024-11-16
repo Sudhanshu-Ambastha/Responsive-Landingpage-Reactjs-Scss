@@ -307,42 +307,16 @@
     }
 
     .category-list-container {
-      margin-bottom: -0.5rem;
+      margin-bottom: -0.5px;
       border-bottom: none;
       display: flex;
       flex-wrap: wrap;
       box-sizing: border-box;
-      justify-content: space-evenly;
+      justify-content: space-around;
     }
 
-    h3.propositions-2 {
-      color: $disabled-nav-content-color;
-
-      &:hover,
-      &.active {
-        color: $light-green-color;
-      }
-    }
-
-    .category-item h3 {
-      color: $disabled-nav-content-color;
-
-      &.hover,
-      &.active {
-        color: $light-green-color;
-      }
-    }
-    h3 {
-      font-size: 24px;
-      font-weight: bold;
-      color: $dark-gray-color;
-      margin-bottom: 0.5rem;
-      &.hover,
-      &.active {
-        color: $light-green-color;
-      }
-    }
     .skill-list-container {
+      padding-left: 3rem;
       .underline {
         color: $light-green-color;
         text-decoration: underline;
@@ -390,7 +364,7 @@
           color: $light-green-color;
           position: absolute;
           margin-top: -8px;
-          margin-left: 19px;
+          margin-left: 4rem;
           left: 0;
           font-size: 1.5rem;
         }
