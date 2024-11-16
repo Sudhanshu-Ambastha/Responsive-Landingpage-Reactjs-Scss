@@ -29,7 +29,7 @@ To run this project locally, follow these steps:
    npm install && npm install sass
    ```
    ```
-   npm install @fortawesome/react-fontawesome && npm install @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons
+   npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons 
    ```
    ```
    npm install lucide-react && npm install react-icons
