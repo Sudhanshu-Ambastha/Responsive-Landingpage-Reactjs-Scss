@@ -67,10 +67,17 @@
       li {
         font-size: 14px;
         color: $dark-gray-color;
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 10px;
 
-        span {
-          font-size: 0.5rem;
-          margin-right: 0.625rem;
+        &::before {
+          content: "■";
+          color: $light-green-color;
+          position: absolute;
+          left: 0;
+          margin-top: -8px;
+          font-size: 1.5rem;
         }
       }
     }
@@ -227,13 +234,7 @@
     }
 
     .dropdown-container {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-
       .dropdown {
-        margin-bottom: 20px;
-
         h4 {
           font-size: 18px;
           font-weight: bold;
@@ -242,6 +243,13 @@
           cursor: pointer;
           display: inline-flex;
           align-items: center;
+          transition: color 0.3s ease;
+
+          &:hover,
+          &.active {
+            border-color: $light-green-color;
+            color: $light-green-color;
+          }
 
           span.numbering {
             font-size: 14px;
@@ -259,18 +267,20 @@
 
             &.active {
               border-color: $light-green-color;
-              background-color: $light-green-color;
               color: $white;
             }
+          }
+
+          &:hover span.numbering {
+            border-color: $light-green-color;
+            color: $light-green-color;
           }
         }
 
         p {
-          font-size: 16px;
-          color: $dark-gray-color;
-          line-height: 1.5;
-          margin-bottom: 20px;
           display: none;
+          color: $dark-gray-color;
+          margin-top: 10px;
 
           &.active {
             display: block;
@@ -285,7 +295,7 @@
       margin-top: -3rem;
       background-image: url("../../assets/Forest.jpg");
       width: 76.5%;
-      height: 400px; // Adjust this height as necessary
+      height: 400px;
       background-size: cover;
       background-position: center;
     }
@@ -297,65 +307,84 @@
     }
 
     .category-list-container {
-      margin-bottom: -0.5rem;
+      margin-bottom: -0.5px;
       border-bottom: none;
       display: flex;
       flex-wrap: wrap;
       box-sizing: border-box;
-      justify-content: space-evenly;
+      justify-content: space-around;
     }
 
-    h3.propositions-2 {
-      color: $disabled-nav-content-color;
-
-      &:hover,
-      &.active {
+    .skill-list-container {
+      padding-left: 3rem;
+      .underline {
         color: $light-green-color;
+        text-decoration: underline;
       }
-    }
+      .skill-item {
+        .progress-bar-p-100 {
+          width: 100%;
+          background: $light-green-color;
+          border-radius: 0.125rem;
+          display: block;
+          padding-left: 1.5rem;
+        }
 
-    .category-item h3 {
-      color: $disabled-nav-content-color;
-
-      &.hover,
-      &.active {
-        color: $light-green-color;
+        .progress-bar-p-76 {
+          width: 76%;
+          background: $light-green-color;
+          border-radius: 0.125rem;
+          display: block;
+          padding-left: 1.5rem;
+        }
+        .progress-bar-p-90 {
+          width: 90%;
+          background: $light-green-color;
+          border-radius: 0.125rem;
+          display: block;
+          padding-left: 1.5rem;
+        }
       }
-    }
-    h3 {
-      font-size: 24px;
-      font-weight: bold;
-      color: $dark-gray-color;
-      margin-bottom: 0.5rem;
-    }
-    &.hover,
-    &.active {
-      color: $light-green-color;
-    }
-    .skill-list-container .skill-item .progress-bar-p-100 {
-      width: 100%;
-      background: $light-green-color;
-      border-radius: 0.125rem;
-      display: block;
-      padding-left: 1.5rem;
-    }
-
-    .skill-list-container .skill-item .progress-bar-p-76 {
-      width: 76%;
-      background: $light-green-color;
-      border-radius: 0.125rem;
-      display: block;
-      padding-left: 1.5rem;
-    }
-    .skill-list-container .skill-item .progress-bar-p-90 {
-      width: 90%;
-      background: $light-green-color;
-      border-radius: 0.125rem;
-      display: block;
-      padding-left: 1.5rem;
+      .Grid,
+      .textarea {
+        .bold {
+          font-weight: 700;
+          color: $dark-gray-color;
+        }
+        .underline {
+          text-decoration: underline;
+          color: $light-green-color;
+        }
+      }
+      .textarea li {
+        list-style: none;
+        padding-left: 17px;
+        &::before {
+          content: "■";
+          color: $light-green-color;
+          position: absolute;
+          margin-top: -8px;
+          margin-left: 4rem;
+          left: 0;
+          font-size: 1.5rem;
+        }
+      }
+      .Grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+        padding: 20px;
+        list-style: none;
+        li {
+          list-style: number;
+          word-wrap: break-word;
+        }
+      }
     }
   }
 }
+
 /* Testimonials Slider */
 .testimonials-section {
   text-align: center;
@@ -392,7 +421,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      z-index: 2;
+      z-index: 1;
       background: rgba(20, 191, 152, 0.1);
       border-radius: 50%;
       padding: 15px;

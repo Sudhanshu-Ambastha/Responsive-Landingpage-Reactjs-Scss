@@ -12,13 +12,15 @@ const Intro = () => (
             <h2>We offer Some of The Best Business Growth Services In Town </h2>
             <br />
             <p>
-                Launching a new company or developing the market position of an existing one can be quite an 
+                Launching a new company or developing the market<br/> 
+                position of an existing one can be quite an<br/> 
                 overwhelming process at times.
             </p>
             <br />
             <p className="lp_italic">
-                "Our mission here at Aria is to get you through those tough moments relying on our team's
-                expertise in starting and growing companies."
+                "Our mission here at Aria is to get you through those<br/> 
+                tough moments relying on our team's expertise in<br/> 
+                starting and growing companies."
             </p>
             <br />
             <h4>Louise Donovan - CEO</h4>    

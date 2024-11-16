@@ -10,13 +10,12 @@ const Contact = () => (
         <span className="section-title">Contact</span>
         <h2>Get In Touch using the form</h2>
         <p>
-          You can stop by our office for a cup of coffee and just use the
-          contact form beginning questioned and inquires
+          You can stop by our office for a cup of coffee and just use the contact<br/>
+          form beginning questioned and inquires
         </p>
         <ul>
           <li><span><FaMapMarkerAlt /></span>22nd Inovative street, San Francisco, CA 94043, US</li>
-          <li><span><FaPhone /></span>+81 720 22 128 <span><FaPhone /></span>+81 720 22 126</li>
-          <li><span><FaEnvelope /></span>office@domain.com</li>
+          <li id="underline"><span><FaPhone /></span>+81 720 22 128 <span><FaPhone /></span>+81 720 22 126<span><FaEnvelope /></span>office@domain.com</li>
         </ul>
         <br />     
         <h3>Follow Aria on Social Media</h3>

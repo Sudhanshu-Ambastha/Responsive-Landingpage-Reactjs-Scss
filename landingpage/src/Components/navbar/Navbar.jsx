@@ -14,7 +14,6 @@ const Navbar = () => {
     const sections = document.querySelectorAll('section');
     let currentSection = 'home';
 
-    // Setting scrolling state
     setIsScrolled(window.scrollY > 20);
 
     sections.forEach((section) => {

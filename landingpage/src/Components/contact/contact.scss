@@ -9,8 +9,8 @@ html {
 
 .contact-container {
   display: flex;
-  justify-content: space-between;
-  padding: 20px 20px 100px 20px;
+  justify-content: space-evenly;
+  padding: -1rem 20px 100px 20px;
   background-color: transparent;
   color: $dark-gray-color;
   height: 100vh;
@@ -21,7 +21,6 @@ html {
     display: flex;
     flex-direction: column;
     max-width: 50%;
-    padding-top: 7rem;
     padding-bottom: 5.625rem;
     box-sizing: border-box;
     position: relative;
@@ -38,7 +37,8 @@ html {
   }
 
   .contact-info {
-    padding-left: 5rem;
+    padding: 0rem 0 0 5rem;
+    align-items: flex-start;
 
     h2,
     p,
@@ -49,6 +49,7 @@ html {
     h2 {
       margin-bottom: 1.375rem;
       font: 700 1.75rem;
+      color: $dark-gray-color;
     }
 
     h3 {
@@ -62,6 +63,10 @@ html {
       li {
         margin-bottom: 5px;
         color: $light-gray-color;
+
+        #underline {
+          text-decoration: underline;
+        }
 
         span {
           color: $light-green-color;
@@ -124,7 +129,13 @@ html {
       border: none;
       border-radius: 5px;
       width: 100%;
+    }
+    input[type="text"],
+    input[type="email"] {
       border: 1px solid $dark-gray-color;
+    }
+    button {
+      border: 2px solid $light-green-color;
     }
 
     input[type="message"] {
