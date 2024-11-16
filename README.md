@@ -29,16 +29,13 @@ To run this project locally, follow these steps:
    npm install && npm install sass
    ```
    ```
-   npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons 
+   npm install react-router-dom && npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons 
    ```
    ```
    npm install lucide-react && npm install react-icons
 
    ```
-   ```
-   npm install react-router-dom && npm install react-scroll
 
-   ```
 4. Start the development server:
    ```
    npm start
