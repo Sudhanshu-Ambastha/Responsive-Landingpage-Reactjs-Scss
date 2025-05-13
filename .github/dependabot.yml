@@ -1,0 +1,18 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/landingpage"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "fix"
+    reviewers:
+      - Sudhanshu-Ambastha
+    assignees:
+      - Sudhanshu-Ambastha
+    labels:
+      - dependencies
+      - security
+    allow:
+      - dependency-type: "all"
