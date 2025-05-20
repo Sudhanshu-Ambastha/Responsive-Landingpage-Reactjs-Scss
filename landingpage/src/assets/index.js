@@ -15,4 +15,5 @@ import OP from '../assets/OP.jpg';
 import OR from '../assets/OR.jpg';
 import OT from '../assets/OT.jpg';
 
-export default { Book, CC, Forest, Girlswing, Glacier, Lakeview, Laptop, Mountain, OB, OC, OF, OG, OM, OP, OR, OT };
+const assets = {Book, CC, Forest, Girlswing, Glacier, Lakeview, Laptop, Mountain, OB, OC, OF, OG, OM, OP, OR, OT };
+export default assets;
