@@ -1,7 +1,7 @@
 {
   "name": "landingpage",
   "version": "0.1.0",
-  "homepage": "https://Sudhanshu-Ambastha.github.io/Responsive-Landingpage-Reactjs-Scss",
+  "homepage": "https://Sudhanshu-Ambastha.github.io/Responsive-Landingpage-Reactjs-Scss/",
   "private": true,
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
