@@ -8,19 +8,10 @@ const Services = () => {
   const [activeCategory, setActiveCategory] = useState(1);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activePoint, setActivePoint] = useState(1);
-  const [enabledStates, setEnabledStates] = useState({
-    1: false,
-    2: false,
-    3: false,
-  }); 
   const scrollContainerRef = useRef(null);
   
   const handleCategoryClick = (category) => {
     setActiveCategory(category);
-    setEnabledStates((prevState) => ({
-      ...Object.fromEntries(Object.keys(prevState).map(key => [key, false])),
-      [category]: !prevState[category], 
-    }));
   };
 
   const handlePointClick = (point) => {
@@ -308,5 +299,4 @@ const Services = () => {
     </div>
   );
 };
-
 export default Services;

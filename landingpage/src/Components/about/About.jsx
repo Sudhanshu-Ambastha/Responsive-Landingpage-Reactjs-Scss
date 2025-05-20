@@ -1,6 +1,6 @@
 import React from "react";
-import "./about.scss";
 import images from "../../assets";
+import "./about.scss";
 
 const About = () => (
   <div className="about-container">

@@ -11,7 +11,7 @@ const Home = () => {
     }, 2000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [phrases.length]);
 
   return (
     <div className="lp__header section__padding" id="home">
@@ -26,5 +26,4 @@ const Home = () => {
     </div>
   );
 };
-
 export default Home;
